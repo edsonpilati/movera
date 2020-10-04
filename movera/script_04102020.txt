@@ -1,0 +1,857 @@
+
+CREATE SEQUENCE movera.seq_est_civ;
+
+CREATE TABLE movera.EST_CVL (
+                nr_est_civ NUMERIC(2) NOT NULL DEFAULT nextval('movera.seq_est_civ'),
+                TX_DCR_EST_CVL VARCHAR(30) NOT NULL,
+                CONSTRAINT nr_est_cvl PRIMARY KEY (nr_est_civ)
+);
+COMMENT ON TABLE movera.EST_CVL IS 'Tabela com os estados civis disponíveis no sistema';
+COMMENT ON COLUMN movera.EST_CVL.nr_est_civ IS 'PK tabela estado civil';
+COMMENT ON COLUMN movera.EST_CVL.TX_DCR_EST_CVL IS 'Descrição do estado civil';
+
+
+ALTER SEQUENCE movera.seq_est_civ OWNED BY movera.EST_CVL.nr_est_civ;
+
+CREATE SEQUENCE movera.seq_pais;
+
+CREATE TABLE movera.PAIS (
+                NR_PAIS NUMERIC(3) NOT NULL DEFAULT nextval('movera.seq_pais'),
+                CD_NRC_PAIS NUMERIC(4) NOT NULL,
+                CD_ISO_ABVD VARCHAR(3),
+                Nome Pais VARCHAR(50) NOT NULL,
+                CONSTRAINT nr_pais PRIMARY KEY (NR_PAIS)
+);
+COMMENT ON TABLE movera.PAIS IS 'Tabela com o cadastro de países';
+COMMENT ON COLUMN movera.PAIS.NR_PAIS IS 'Pk de País';
+COMMENT ON COLUMN movera.PAIS.CD_NRC_PAIS IS 'Código numérico país';
+COMMENT ON COLUMN movera.PAIS.CD_ISO_ABVD IS 'Código ISO Abreviado';
+COMMENT ON COLUMN movera.PAIS.Nome Pais IS 'Nome do país';
+
+
+ALTER SEQUENCE movera.seq_pais OWNED BY movera.PAIS.NR_PAIS;
+
+CREATE SEQUENCE movera.seq_clc_cpdd_pgto;
+
+CREATE TABLE movera.CLC_CPDD_PGTO (
+                NR_CLC_CPDD_PGTO NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_clc_cpdd_pgto'),
+                CONSTRAINT nr_clc_cpdd_pgto PRIMARY KEY (NR_CLC_CPDD_PGTO)
+);
+COMMENT ON TABLE movera.CLC_CPDD_PGTO IS 'Tabela com as informações do cálculo de capacidade pagamento do cliente';
+COMMENT ON COLUMN movera.CLC_CPDD_PGTO.NR_CLC_CPDD_PGTO IS 'PK tabela Cálculo Capacidade de Pagamento';
+
+
+ALTER SEQUENCE movera.seq_clc_cpdd_pgto OWNED BY movera.CLC_CPDD_PGTO.NR_CLC_CPDD_PGTO;
+
+CREATE SEQUENCE movera.seq_anl_itvt;
+
+CREATE TABLE movera.ANL_ITVT (
+                NR_ANL_ITVT NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_anl_itvt'),
+                CONSTRAINT nr_anl_itvt PRIMARY KEY (NR_ANL_ITVT)
+);
+COMMENT ON TABLE movera.ANL_ITVT IS 'Consulta para análise do cliente, cpf, cnpj, restrições, empréstimos, etc.';
+COMMENT ON COLUMN movera.ANL_ITVT.NR_ANL_ITVT IS 'PK Tabela Análise de Interveniente';
+
+
+ALTER SEQUENCE movera.seq_anl_itvt OWNED BY movera.ANL_ITVT.NR_ANL_ITVT;
+
+CREATE SEQUENCE movera.seq_proposta_prop_id;
+
+CREATE TABLE movera.PROPOSTA (
+                prop_id NUMERIC(6) NOT NULL DEFAULT nextval('movera.seq_proposta_prop_id'),
+                CONSTRAINT nr_prop PRIMARY KEY (prop_id)
+);
+COMMENT ON TABLE movera.PROPOSTA IS 'Tabela com a proposta de crédito para o cliente';
+COMMENT ON COLUMN movera.PROPOSTA.prop_id IS 'PK tabela Proposta';
+
+
+ALTER SEQUENCE movera.seq_proposta_prop_id OWNED BY movera.PROPOSTA.prop_id;
+
+CREATE TABLE movera.CONTRATO (
+                prop_id NUMERIC(6) NOT NULL
+);
+COMMENT ON TABLE movera.CONTRATO IS 'Tabela com as informações do contrato realizado com o cliente';
+COMMENT ON COLUMN movera.CONTRATO.prop_id IS 'PK tabela Proposta';
+
+
+CREATE SEQUENCE movera.seq_est;
+
+CREATE TABLE movera.UND_FDRL (
+                NR_UND_FDRL NUMERIC(2) NOT NULL DEFAULT nextval('movera.seq_est'),
+                CD_UND_FDRL VARCHAR(2) NOT NULL,
+                TX_NM_UND_FDRL VARCHAR(30) NOT NULL,
+                CONSTRAINT nr_und_fdrl PRIMARY KEY (NR_UND_FDRL)
+);
+COMMENT ON TABLE movera.UND_FDRL IS 'Tabela com o cadastro dos estados';
+COMMENT ON COLUMN movera.UND_FDRL.NR_UND_FDRL IS 'PK tabela Unidade Federal';
+COMMENT ON COLUMN movera.UND_FDRL.CD_UND_FDRL IS 'Código da Unidade Federal (SP,DF,etc)';
+COMMENT ON COLUMN movera.UND_FDRL.TX_NM_UND_FDRL IS 'Nome da unidade federal';
+
+
+ALTER SEQUENCE movera.seq_est OWNED BY movera.UND_FDRL.NR_UND_FDRL;
+
+CREATE SEQUENCE movera.seq_cid;
+
+CREATE TABLE movera.CIDADE (
+                NR_CID NUMERIC(4) NOT NULL DEFAULT nextval('movera.seq_cid'),
+                TX_NM_CID VARCHAR(50) NOT NULL,
+                NR_EST NUMERIC(2) NOT NULL,
+                CONSTRAINT nr_cid PRIMARY KEY (NR_CID)
+);
+COMMENT ON TABLE movera.CIDADE IS 'Tabela com o cadastro das cidades';
+COMMENT ON COLUMN movera.CIDADE.NR_CID IS 'PK tabela Cidade';
+COMMENT ON COLUMN movera.CIDADE.TX_NM_CID IS 'Nome da Cidade';
+COMMENT ON COLUMN movera.CIDADE.NR_EST IS 'FK tabela Estado';
+
+
+ALTER SEQUENCE movera.seq_cid OWNED BY movera.CIDADE.NR_CID;
+
+CREATE SEQUENCE movera.seq_ag_bco;
+
+CREATE TABLE movera.AG_BCO (
+                NR_AG_BCO NUMERIC(6) NOT NULL DEFAULT nextval('movera.seq_ag_bco'),
+                TX_PRF VARCHAR(5) NOT NULL,
+                TX_NM_AG_BCO VARCHAR(30) NOT NULL,
+                NR_AG_BCO NUMERIC(8) NOT NULL,
+                NR_CID NUMERIC(4) NOT NULL,
+                CONSTRAINT nr_ag_bco PRIMARY KEY (NR_AG_BCO)
+);
+COMMENT ON TABLE movera.AG_BCO IS 'Agência Banco';
+COMMENT ON COLUMN movera.AG_BCO.NR_AG_BCO IS 'PK Tabela Agência Banco';
+COMMENT ON COLUMN movera.AG_BCO.TX_PRF IS 'Prefixo Agência';
+COMMENT ON COLUMN movera.AG_BCO.TX_NM_AG_BCO IS 'Nome da Agência';
+COMMENT ON COLUMN movera.AG_BCO.NR_AG_BCO IS 'Número da agência';
+COMMENT ON COLUMN movera.AG_BCO.NR_CID IS 'FK tabela Cidade';
+
+
+ALTER SEQUENCE movera.seq_ag_bco OWNED BY movera.AG_BCO.NR_AG_BCO;
+
+CREATE SEQUENCE movera.seq_lcc;
+
+CREATE TABLE movera.LCC (
+                NR_LCC NUMERIC(4) NOT NULL DEFAULT nextval('movera.seq_lcc'),
+                QT_USU_ACSS NUMERIC(5) NOT NULL,
+                DT_INC_VGC DATE NOT NULL,
+                DT_INC_VGC DATE NOT NULL,
+                CONSTRAINT nr_lcc PRIMARY KEY (NR_LCC)
+);
+COMMENT ON TABLE movera.LCC IS 'Tabela com as informações de licença';
+COMMENT ON COLUMN movera.LCC.NR_LCC IS 'PK tabela Licença';
+COMMENT ON COLUMN movera.LCC.QT_USU_ACSS IS 'Campo com a informação de quantidade de usuário limite conectado no sistema';
+COMMENT ON COLUMN movera.LCC.DT_INC_VGC IS 'Data Início de vigência da licença';
+COMMENT ON COLUMN movera.LCC.DT_INC_VGC IS 'Data Final de Vigência da Licença do Sistema';
+
+
+ALTER SEQUENCE movera.seq_lcc OWNED BY movera.LCC.NR_LCC;
+
+CREATE SEQUENCE movera.seq_und;
+
+CREATE TABLE movera.UND (
+                NR_UND NUMERIC(5) NOT NULL DEFAULT nextval('movera.seq_und'),
+                TX_NM_UND VARCHAR(50) NOT NULL,
+                CD_UND VARCHAR(4) NOT NULL,
+                NR_CID NUMERIC(4) NOT NULL,
+                CONSTRAINT nr_und PRIMARY KEY (NR_UND)
+);
+COMMENT ON TABLE movera.UND IS 'Tabela com o cadastro das Unidades';
+COMMENT ON COLUMN movera.UND.NR_UND IS 'PK tabela Unidade';
+COMMENT ON COLUMN movera.UND.TX_NM_UND IS 'Nome da Unidade';
+COMMENT ON COLUMN movera.UND.CD_UND IS 'Código da unidade';
+COMMENT ON COLUMN movera.UND.NR_CID IS 'FK tabela Cidade';
+
+
+ALTER SEQUENCE movera.seq_und OWNED BY movera.UND.NR_UND;
+
+CREATE SEQUENCE movera.seq_obj;
+
+CREATE TABLE movera.OBJETO (
+                nr_obj NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_obj'),
+                obj_nome VARCHAR(30) NOT NULL,
+                obj_texto VARCHAR(30) NOT NULL,
+                obj_texto_ajuda VARCHAR(30) NOT NULL,
+                CONSTRAINT nr_obj PRIMARY KEY (nr_obj)
+);
+COMMENT ON TABLE movera.OBJETO IS 'Objeto do sistema, tais como botões, links, etc.';
+COMMENT ON COLUMN movera.OBJETO.nr_obj IS 'PK tabela Objeto';
+COMMENT ON COLUMN movera.OBJETO.obj_nome IS 'Nome do objeto';
+COMMENT ON COLUMN movera.OBJETO.obj_texto IS 'Texto de exibição do objeto no sistema';
+COMMENT ON COLUMN movera.OBJETO.obj_texto_ajuda IS 'Texto Com a Ajuda para o usuário do objeto do sistema';
+
+
+ALTER SEQUENCE movera.seq_obj OWNED BY movera.OBJETO.nr_obj;
+
+CREATE SEQUENCE movera.seq_endr;
+
+CREATE TABLE movera.ENDEREÇO (
+                nr_endr NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_endr'),
+                end_cep VARCHAR(8) NOT NULL,
+                end_num VARCHAR(4) NOT NULL,
+                end_logradouro VARCHAR(50) NOT NULL,
+                end_compl VARCHAR(50) NOT NULL,
+                end_bairro VARCHAR(30) NOT NULL,
+                cid_id NUMERIC(4) NOT NULL,
+                in_tip_imv CHAR(1) NOT NULL,
+                CONSTRAINT nr_end PRIMARY KEY (nr_endr)
+);
+COMMENT ON TABLE movera.ENDEREÇO IS 'Tabela com o endereço cadastrado do cliente';
+COMMENT ON COLUMN movera.ENDEREÇO.nr_endr IS 'PK tabela Endereço';
+COMMENT ON COLUMN movera.ENDEREÇO.end_cep IS 'CEP ENDEREÇO';
+COMMENT ON COLUMN movera.ENDEREÇO.end_num IS 'Número do endereço';
+COMMENT ON COLUMN movera.ENDEREÇO.end_logradouro IS 'logradouro do endereço';
+COMMENT ON COLUMN movera.ENDEREÇO.end_compl IS 'Complemento do Endereço';
+COMMENT ON COLUMN movera.ENDEREÇO.end_bairro IS 'Bairro do Endereço';
+COMMENT ON COLUMN movera.ENDEREÇO.cid_id IS 'PK tabela Cidade';
+COMMENT ON COLUMN movera.ENDEREÇO.in_tip_imv IS '1=Próprio Quitado
+2=Próprio Financiado
+3=Alugado
+4=Familiar
+5=Cedido';
+
+
+ALTER SEQUENCE movera.seq_endr OWNED BY movera.ENDEREÇO.nr_endr;
+
+CREATE SEQUENCE movera.seq_fml;
+
+CREATE TABLE movera.FML (
+                NR_FML NUMERIC(4) NOT NULL DEFAULT nextval('movera.seq_fml'),
+                TX_NM_FML VARCHAR(50) NOT NULL,
+                TX_URL_FML VARCHAR(200),
+                CONSTRAINT nr_fml PRIMARY KEY (NR_FML)
+);
+COMMENT ON TABLE movera.FML IS 'Formulários do sistema';
+COMMENT ON COLUMN movera.FML.NR_FML IS 'PK Tabela formulário';
+COMMENT ON COLUMN movera.FML.TX_NM_FML IS 'Nome do Formulário do Sistema';
+COMMENT ON COLUMN movera.FML.TX_URL_FML IS 'Texto com as url dos formulários';
+
+
+ALTER SEQUENCE movera.seq_fml OWNED BY movera.FML.NR_FML;
+
+CREATE SEQUENCE movera.seq_obj_frm;
+
+CREATE TABLE movera.OBJETO_FORMULARIO (
+                nr_obg_frm NUMERIC(6) NOT NULL DEFAULT nextval('movera.seq_obj_frm'),
+                nr_frm NUMERIC(4) NOT NULL,
+                nr_obj NUMERIC(8) NOT NULL,
+                CONSTRAINT nr_obj_form PRIMARY KEY (nr_obg_frm)
+);
+COMMENT ON TABLE movera.OBJETO_FORMULARIO IS 'Tabela com vincúlo entre os objetos do sistema e os formulários';
+COMMENT ON COLUMN movera.OBJETO_FORMULARIO.nr_obg_frm IS 'PK Tabela Objeto Formulário';
+COMMENT ON COLUMN movera.OBJETO_FORMULARIO.nr_frm IS 'PK Tabela formulário';
+COMMENT ON COLUMN movera.OBJETO_FORMULARIO.nr_obj IS 'PK tabela Objeto';
+
+
+ALTER SEQUENCE movera.seq_obj_frm OWNED BY movera.OBJETO_FORMULARIO.nr_obg_frm;
+
+CREATE SEQUENCE movera.seq_doc;
+
+CREATE TABLE movera.DOCUMENTO (
+                nr_doc NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_doc'),
+                doc_desc VARCHAR(30) NOT NULL,
+                dt_doc_cad DATE NOT NULL,
+                doc_cam_serv_link VARCHAR(2000) NOT NULL,
+                CONSTRAINT nr_doc PRIMARY KEY (nr_doc)
+);
+COMMENT ON TABLE movera.DOCUMENTO IS 'Documento do cliente para cadastro e identificação do cliente';
+COMMENT ON COLUMN movera.DOCUMENTO.nr_doc IS 'PK tabela Documento';
+COMMENT ON COLUMN movera.DOCUMENTO.doc_desc IS 'Descrição do documento';
+COMMENT ON COLUMN movera.DOCUMENTO.dt_doc_cad IS 'Data de Cadastro do Documento';
+COMMENT ON COLUMN movera.DOCUMENTO.doc_cam_serv_link IS 'Link com o caminho do documento';
+
+
+ALTER SEQUENCE movera.seq_doc OWNED BY movera.DOCUMENTO.nr_doc;
+
+CREATE SEQUENCE movera.seq_menu;
+
+CREATE TABLE movera.MENU (
+                NR_MENU NUMERIC(3) NOT NULL DEFAULT nextval('movera.seq_menu'),
+                TX_DCR_MENU VARCHAR(30) NOT NULL,
+                IN_SIS_MENU CHAR(1) NOT NULL,
+                NR_MENU_PAI NUMERIC(3),
+                CONSTRAINT nr_menu PRIMARY KEY (NR_MENU)
+);
+COMMENT ON TABLE movera.MENU IS 'Cadastro de menus do sistema';
+COMMENT ON COLUMN movera.MENU.NR_MENU IS 'Pk tabela Menu';
+COMMENT ON COLUMN movera.MENU.TX_DCR_MENU IS 'Descrição menu';
+COMMENT ON COLUMN movera.MENU.IN_SIS_MENU IS 'W=Web
+M=Mobile';
+COMMENT ON COLUMN movera.MENU.NR_MENU_PAI IS 'FK tabela Menu';
+
+
+ALTER SEQUENCE movera.seq_menu OWNED BY movera.MENU.NR_MENU;
+
+CREATE SEQUENCE movera.seq_nr_menu_fml;
+
+CREATE TABLE movera.MENU FORMULARIO (
+                NR_MENU_FML NUMERIC(4) NOT NULL DEFAULT nextval('movera.seq_nr_menu_fml'),
+                nr_menu NUMERIC(3) NOT NULL,
+                nr_frm NUMERIC(4) NOT NULL,
+                CONSTRAINT nr_menu_form PRIMARY KEY (NR_MENU_FML)
+);
+COMMENT ON TABLE movera.MENU FORMULARIO IS 'Tabela com a vinculação entre menus e formulários';
+COMMENT ON COLUMN movera.MENU FORMULARIO.NR_MENU_FML IS 'PK Menu Formulário';
+COMMENT ON COLUMN movera.MENU FORMULARIO.nr_menu IS 'Pk tabela Menu';
+COMMENT ON COLUMN movera.MENU FORMULARIO.nr_frm IS 'PK Tabela formulário';
+
+
+ALTER SEQUENCE movera.seq_nr_menu_fml OWNED BY movera.MENU FORMULARIO.NR_MENU_FML;
+
+CREATE SEQUENCE movera.seq_emp;
+
+CREATE TABLE movera.EMPRESA (
+                nr_emp NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_emp'),
+                emp_cnpj VARCHAR(14) NOT NULL,
+                emp_raz_social VARCHAR(50) NOT NULL,
+                emp_nome_fant VARCHAR(50) NOT NULL,
+                emp_dt_cad DATE NOT NULL,
+                tx_insc_est VARCHAR(13),
+                CONSTRAINT nr_empresa PRIMARY KEY (nr_emp)
+);
+COMMENT ON TABLE movera.EMPRESA IS 'Tabela com o cadastro das empresas dos clientes';
+COMMENT ON COLUMN movera.EMPRESA.nr_emp IS 'Número Empresa';
+COMMENT ON COLUMN movera.EMPRESA.emp_cnpj IS 'CNPJ da empresa';
+COMMENT ON COLUMN movera.EMPRESA.emp_raz_social IS 'Razão Social Empresa';
+COMMENT ON COLUMN movera.EMPRESA.emp_nome_fant IS 'Nome Fantasia da Empresa';
+COMMENT ON COLUMN movera.EMPRESA.emp_dt_cad IS 'Data cadastro';
+COMMENT ON COLUMN movera.EMPRESA.tx_insc_est IS 'Inscrição Estadual da Empresa';
+
+
+ALTER SEQUENCE movera.seq_emp OWNED BY movera.EMPRESA.nr_emp;
+
+CREATE SEQUENCE movera.seq_pess;
+
+CREATE TABLE movera.PPESSOA (
+                NR_PSS NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_pess'),
+                TX_NM_PSS VARCHAR(60) NOT NULL,
+                TX_CPF_PSS VARCHAR(11) NOT NULL,
+                TX_REG_GRL_PSS VARCHAR(9) NOT NULL,
+                TX_TCEL_PSS VARCHAR(11) NOT NULL,
+                TX_TEL_CML_PSS VARCHAR(11),
+                TX_EMAI_PSS VARCHAR(30),
+                NR_EST_CVL NUMERIC(2) NOT NULL,
+                DT_HH_CAD_PSS TIMESTAMP NOT NULL,
+                CONSTRAINT nr_pessoa PRIMARY KEY (NR_PSS)
+);
+COMMENT ON TABLE movera.PPESSOA IS 'Tabela com o cadastro das pessoas';
+COMMENT ON COLUMN movera.PPESSOA.NR_PSS IS 'PK tabela pessoa';
+COMMENT ON COLUMN movera.PPESSOA.TX_NM_PSS IS 'Nome da Pessoa';
+COMMENT ON COLUMN movera.PPESSOA.TX_CPF_PSS IS 'Cpf da Pessoa';
+COMMENT ON COLUMN movera.PPESSOA.TX_REG_GRL_PSS IS 'Rg da pessoa';
+COMMENT ON COLUMN movera.PPESSOA.TX_TCEL_PSS IS 'telefone celular da pessoa';
+COMMENT ON COLUMN movera.PPESSOA.TX_TEL_CML_PSS IS 'Telefone comercial da pessoa';
+COMMENT ON COLUMN movera.PPESSOA.TX_EMAI_PSS IS 'Email da pessoa';
+COMMENT ON COLUMN movera.PPESSOA.NR_EST_CVL IS 'FK tabela estado civil';
+COMMENT ON COLUMN movera.PPESSOA.DT_HH_CAD_PSS IS 'Data hora cadastro pessoa';
+
+
+ALTER SEQUENCE movera.seq_pess OWNED BY movera.PPESSOA.NR_PSS;
+
+CREATE SEQUENCE movera.seq_avlt;
+
+CREATE TABLE movera.AVLT (
+                NR_AVLT NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_avlt'),
+                NR_PSS NUMERIC(8) NOT NULL,
+                cli_tipo_oper CHAR(1) NOT NULL,
+                cli_possui_conta_in NCHAR NOT NULL,
+                cli_org_emis VARCHAR(5) NOT NULL,
+                prop_nome_pai VARCHAR(100) NOT NULL,
+                tx_dsc_form VARCHAR(30) NOT NULL,
+                prop_forma_tratam CHAR(1) NOT NULL,
+                nr_pais NUMERIC(3) NOT NULL,
+                prop_nome_mãe VARCHAR(100) NOT NULL,
+                prop_cap_civil VARCHAR(1) NOT NULL,
+                prop_sexo CHAR(1) NOT NULL,
+                prop_cid_natur VARCHAR(50) NOT NULL,
+                prop_autor_scr CHAR(1) NOT NULL,
+                nr_pess NUMERIC(8) NOT NULL,
+                prop_nascionalidade CHAR(1) NOT NULL,
+                cli_possui_smart_in CHAR(1) NOT NULL,
+                nr_pais NUMERIC(3) NOT NULL,
+                CONSTRAINT nr_avlt PRIMARY KEY (NR_AVLT)
+);
+COMMENT ON TABLE movera.AVLT IS 'Tabela com os fiadores';
+COMMENT ON COLUMN movera.AVLT.NR_AVLT IS 'Número Fiador';
+COMMENT ON COLUMN movera.AVLT.NR_PSS IS 'PK tabela pessoa';
+COMMENT ON COLUMN movera.AVLT.cli_tipo_oper IS 'G = Grupo
+I = Individual';
+COMMENT ON COLUMN movera.AVLT.cli_possui_conta_in IS 'Se o cliente possui conta BB
+conta corrente (0) 
+poupança (1)
+não possui (2)';
+COMMENT ON COLUMN movera.AVLT.prop_nome_pai IS 'Nome do Pai';
+COMMENT ON COLUMN movera.AVLT.tx_dsc_form IS 'Texto Descrição Formação(Superior Completo, Pos Graduado, etc...)';
+COMMENT ON COLUMN movera.AVLT.prop_forma_tratam IS '1 =Sr
+2 =Sra';
+COMMENT ON COLUMN movera.AVLT.nr_pais IS 'Pk de País';
+COMMENT ON COLUMN movera.AVLT.prop_nome_mãe IS 'Nome da mãe';
+COMMENT ON COLUMN movera.AVLT.prop_cap_civil IS '1 Capaz';
+COMMENT ON COLUMN movera.AVLT.prop_sexo IS 'M= Masculino,
+F= Feminino';
+COMMENT ON COLUMN movera.AVLT.prop_cid_natur IS 'Nome da cidade de naturalidade';
+COMMENT ON COLUMN movera.AVLT.prop_autor_scr IS '1 = Sim
+0 = Não';
+COMMENT ON COLUMN movera.AVLT.nr_pess IS 'PK tabela proponente';
+COMMENT ON COLUMN movera.AVLT.prop_nascionalidade IS '1-Brasileiro; 2-estrangeiro com visto permanente; 3-Naturalizado (a); 4-Português com residência permanente no Brasil e 5-Estrangeiro com Domicilio no Exterior.';
+COMMENT ON COLUMN movera.AVLT.cli_possui_smart_in IS '1 = Sim
+0 = Não';
+COMMENT ON COLUMN movera.AVLT.nr_pais IS 'Pk de País';
+
+
+ALTER SEQUENCE movera.seq_avlt OWNED BY movera.AVLT.NR_AVLT;
+
+CREATE TABLE movera.PROP (
+                nr_prop NUMERIC(8) NOT NULL,
+                cli_possui_conta_in NCHAR NOT NULL,
+                cli_tipo_oper CHAR(1) NOT NULL,
+                prop_autor_scr CHAR(1) NOT NULL,
+                cli_org_emis VARCHAR(5) NOT NULL,
+                prop_forma_tratam CHAR(1) NOT NULL,
+                prop_cid_natur VARCHAR(50) NOT NULL,
+                prop_nascionalidade CHAR(1) NOT NULL,
+                prop_sexo CHAR(1) NOT NULL,
+                prop_nome_mãe VARCHAR(100) NOT NULL,
+                prop_nome_pai VARCHAR(100) NOT NULL,
+                cli_possui_smart_in CHAR(1) NOT NULL,
+                tx_dsc_form VARCHAR(30) NOT NULL,
+                prop_cap_civil VARCHAR(1) NOT NULL,
+                nr_pess NUMERIC(8) NOT NULL,
+                nr_endr NUMERIC(8) NOT NULL,
+                nr_pais NUMERIC(3) NOT NULL,
+                CONSTRAINT nr_prop PRIMARY KEY (nr_prop)
+);
+COMMENT ON TABLE movera.PROP IS 'Tabela com os dados do proponente';
+COMMENT ON COLUMN movera.PROP.nr_prop IS 'PK tabela Proponente';
+COMMENT ON COLUMN movera.PROP.cli_possui_conta_in IS 'Se o cliente possui conta BB
+conta corrente (0) 
+poupança (1)
+não possui (2)';
+COMMENT ON COLUMN movera.PROP.cli_tipo_oper IS 'G = Grupo
+I = Individual';
+COMMENT ON COLUMN movera.PROP.prop_autor_scr IS '1 = Sim
+0 = Não';
+COMMENT ON COLUMN movera.PROP.prop_forma_tratam IS '1 =Sr
+2 =Sra';
+COMMENT ON COLUMN movera.PROP.prop_cid_natur IS 'Nome da cidade de naturalidade';
+COMMENT ON COLUMN movera.PROP.prop_nascionalidade IS '1-Brasileiro; 2-estrangeiro com visto permanente; 3-Naturalizado (a); 4-Português com residência permanente no Brasil e 5-Estrangeiro com Domicilio no Exterior.';
+COMMENT ON COLUMN movera.PROP.prop_sexo IS 'M= Masculino,
+F= Feminino';
+COMMENT ON COLUMN movera.PROP.prop_nome_mãe IS 'Nome da mãe';
+COMMENT ON COLUMN movera.PROP.prop_nome_pai IS 'Nome do Pai';
+COMMENT ON COLUMN movera.PROP.cli_possui_smart_in IS '1 = Sim
+0 = Não';
+COMMENT ON COLUMN movera.PROP.tx_dsc_form IS 'Texto Descrição Formação(Superior Completo, Pos Graduado, etc...)';
+COMMENT ON COLUMN movera.PROP.prop_cap_civil IS '1 Capaz';
+COMMENT ON COLUMN movera.PROP.nr_pess IS 'PK tabela proponente';
+COMMENT ON COLUMN movera.PROP.nr_endr IS 'PK tabela Endereço';
+COMMENT ON COLUMN movera.PROP.nr_pais IS 'Pk de País';
+
+
+CREATE SEQUENCE movera.seq_prpn_prpt;
+
+CREATE TABLE movera.PRPN_PRPT (
+                NR_PRPN_PRPT NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_prpn_prpt'),
+                nr_prop NUMERIC(8) NOT NULL,
+                nr_emp NUMERIC(8),
+                CONSTRAINT nr_prpn_prpt PRIMARY KEY (NR_PRPN_PRPT)
+);
+COMMENT ON TABLE movera.PRPN_PRPT IS 'Tabela com o relacionamento N-N entre PROPONENTE e Proposta';
+COMMENT ON COLUMN movera.PRPN_PRPT.NR_PRPN_PRPT IS 'PK tabela propomente empresa';
+COMMENT ON COLUMN movera.PRPN_PRPT.nr_prop IS 'PK tabela Proponente';
+COMMENT ON COLUMN movera.PRPN_PRPT.nr_emp IS 'Número Empresa';
+
+
+ALTER SEQUENCE movera.seq_prpn_prpt OWNED BY movera.PRPN_PRPT.NR_PRPN_PRPT;
+
+CREATE SEQUENCE movera.seq_doc_prop;
+
+CREATE TABLE movera.DOCUMENTO_PROPONENTE (
+                nr_doc_prop NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_doc_prop'),
+                nr_prop NUMERIC(8) NOT NULL,
+                nr_doc NUMERIC(8) NOT NULL,
+                CONSTRAINT nr_doc_cli PRIMARY KEY (nr_doc_prop)
+);
+COMMENT ON TABLE movera.DOCUMENTO_PROPONENTE IS 'Tabela com o cadastro dos documentos do proponente';
+COMMENT ON COLUMN movera.DOCUMENTO_PROPONENTE.nr_doc_prop IS 'PK tabela Documento Proponente';
+COMMENT ON COLUMN movera.DOCUMENTO_PROPONENTE.nr_prop IS 'PK tabela Proponente';
+COMMENT ON COLUMN movera.DOCUMENTO_PROPONENTE.nr_doc IS 'PK tabela Documento';
+
+
+ALTER SEQUENCE movera.seq_doc_prop OWNED BY movera.DOCUMENTO_PROPONENTE.nr_doc_prop;
+
+CREATE SEQUENCE movera.seq_ct;
+
+CREATE TABLE movera.CONTA (
+                NR_CT NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_ct'),
+                NR_PSS NUMERIC(8) NOT NULL,
+                ag_id NUMERIC(6) NOT NULL,
+                conta_num VARCHAR(10) NOT NULL,
+                CONSTRAINT nr_conta PRIMARY KEY (NR_CT)
+);
+COMMENT ON TABLE movera.CONTA IS 'Tabela com as contas do cliente (banco, corrente, salário)';
+COMMENT ON COLUMN movera.CONTA.NR_CT IS 'PK tabela Conta';
+COMMENT ON COLUMN movera.CONTA.NR_PSS IS 'FK tabela Pessoa';
+COMMENT ON COLUMN movera.CONTA.ag_id IS 'PK Tabela Agência';
+COMMENT ON COLUMN movera.CONTA.conta_num IS 'Número da conta';
+
+
+ALTER SEQUENCE movera.seq_ct OWNED BY movera.CONTA.NR_CT;
+
+CREATE TABLE movera.CREDITO (
+                cred_token_saque VARCHAR(30) NOT NULL,
+                NR_CT NUMERIC(8) NOT NULL
+);
+COMMENT ON TABLE movera.CREDITO IS 'Tabela com as informações do crédito liberado para o cliente';
+COMMENT ON COLUMN movera.CREDITO.cred_token_saque IS 'Token para o saque';
+COMMENT ON COLUMN movera.CREDITO.NR_CT IS 'PK tabela Conta';
+
+
+CREATE SEQUENCE movera.seq_prfl;
+
+CREATE TABLE movera.PRFL (
+                NR_PRFL NUMERIC(4) NOT NULL DEFAULT nextval('movera.seq_prfl'),
+                TX_NM_PRFL VARCHAR(30) NOT NULL,
+                CONSTRAINT nr_prfl PRIMARY KEY (NR_PRFL)
+);
+COMMENT ON TABLE movera.PRFL IS 'Tabela com o cadastro de perfis de usuário do sistema';
+COMMENT ON COLUMN movera.PRFL.NR_PRFL IS 'PK tabela Perfil';
+COMMENT ON COLUMN movera.PRFL.TX_NM_PRFL IS 'Nome Perfil';
+
+
+ALTER SEQUENCE movera.seq_prfl OWNED BY movera.PRFL.NR_PRFL;
+
+CREATE SEQUENCE movera.seq_prfl_menu;
+
+CREATE TABLE movera.PRFL_MENU (
+                NR_PRFL_MENU NUMERIC(4) NOT NULL DEFAULT nextval('movera.seq_prfl_menu'),
+                NR_PRFL NUMERIC(4) NOT NULL,
+                NR_MENU NUMERIC(3) NOT NULL,
+                CONSTRAINT nr_prfl_menu PRIMARY KEY (NR_PRFL_MENU)
+);
+COMMENT ON TABLE movera.PRFL_MENU IS 'Tabela com o vínculo entre os perfis e os menus exibidos no sistema';
+COMMENT ON COLUMN movera.PRFL_MENU.NR_PRFL_MENU IS 'PK tabela Perfil Menu';
+COMMENT ON COLUMN movera.PRFL_MENU.NR_PRFL IS 'FK tabela Perfil';
+COMMENT ON COLUMN movera.PRFL_MENU.NR_MENU IS 'FK tabela Menu';
+
+
+ALTER SEQUENCE movera.seq_prfl_menu OWNED BY movera.PRFL_MENU.NR_PRFL_MENU;
+
+CREATE SEQUENCE movera.seq_prm_sis;
+
+CREATE TABLE movera.PRM_SIS (
+                NR_PRM_SIS NUMERIC(2) NOT NULL DEFAULT nextval('movera.seq_prm_sis'),
+                IN_AMB CHAR(1) NOT NULL,
+                CONSTRAINT nr_prm_sis PRIMARY KEY (NR_PRM_SIS)
+);
+COMMENT ON TABLE movera.PRM_SIS IS 'Tabela com o cadastro dos parâmetros do sistema';
+COMMENT ON COLUMN movera.PRM_SIS.NR_PRM_SIS IS 'PK tabela Parâmetro Sistema';
+COMMENT ON COLUMN movera.PRM_SIS.IN_AMB IS 'W=Web
+M=Mobile';
+
+
+ALTER SEQUENCE movera.seq_prm_sis OWNED BY movera.PRM_SIS.NR_PRM_SIS;
+
+CREATE SEQUENCE movera.seq_usu_sis;
+
+CREATE TABLE movera.USU_SIS (
+                NR_USU_SIS NUMERIC(5) NOT NULL DEFAULT nextval('movera.seq_usu_sis'),
+                TX_SNH_USU_SIS VARCHAR(10) NOT NULL,
+                IN_USU_SIS_ATI CHAR(1) DEFAULT 1 NOT NULL,
+                CD_CHV_SSBB VARCHAR(8),
+                nr_pess NUMERIC(8) NOT NULL,
+                CONSTRAINT nr_usu_sis PRIMARY KEY (NR_USU_SIS)
+);
+COMMENT ON TABLE movera.USU_SIS IS 'Tabela com o cadastro de usuários do sistema';
+COMMENT ON COLUMN movera.USU_SIS.NR_USU_SIS IS 'Pk tabela Usuário Sistema';
+COMMENT ON COLUMN movera.USU_SIS.TX_SNH_USU_SIS IS 'Senha do usuário sistema';
+COMMENT ON COLUMN movera.USU_SIS.IN_USU_SIS_ATI IS 'Ativo(1 =Sim ou 0=Não)';
+COMMENT ON COLUMN movera.USU_SIS.CD_CHV_SSBB IS 'Chave sissbb';
+COMMENT ON COLUMN movera.USU_SIS.nr_pess IS 'PK tabela proponente';
+
+
+ALTER SEQUENCE movera.seq_usu_sis OWNED BY movera.USU_SIS.NR_USU_SIS;
+
+CREATE SEQUENCE movera.seq_prfl_und_usu_sis;
+
+CREATE TABLE movera.PRFL_UND_USU (
+                NR_PRFL_UND_USU NUMERIC(4) NOT NULL DEFAULT nextval('movera.seq_prfl_und_usu_sis'),
+                NR_PRFL NUMERIC(4) NOT NULL,
+                NR_UND NUMERIC(5) NOT NULL,
+                NR_USU_SIS NUMERIC(5) NOT NULL,
+                CONSTRAINT nr_prfl_und_usu PRIMARY KEY (NR_PRFL_UND_USU)
+);
+COMMENT ON TABLE movera.PRFL_UND_USU IS 'Tabela de vinculo entre usuário perfil e unidade';
+COMMENT ON COLUMN movera.PRFL_UND_USU.NR_PRFL_UND_USU IS 'PK tabela Perfil Unidade Usuário Sistema';
+COMMENT ON COLUMN movera.PRFL_UND_USU.NR_PRFL IS 'FK tabela Perfil';
+COMMENT ON COLUMN movera.PRFL_UND_USU.NR_UND IS 'FK tabela Unidade';
+COMMENT ON COLUMN movera.PRFL_UND_USU.NR_USU_SIS IS 'FK tabela Usuario Sistema';
+
+
+ALTER SEQUENCE movera.seq_prfl_und_usu_sis OWNED BY movera.PRFL_UND_USU.NR_PRFL_UND_USU;
+
+CREATE SEQUENCE movera.seq_lcc_usu_sis;
+
+CREATE TABLE movera.LCC_USU_SIS (
+                NR_LCC_USU_SIS NUMERIC(5) NOT NULL DEFAULT nextval('movera.seq_lcc_usu_sis'),
+                NR_USU_SIS NUMERIC(5) NOT NULL,
+                lic_id NUMERIC(4) NOT NULL,
+                CONSTRAINT nr_lcc_usu_sis PRIMARY KEY (NR_LCC_USU_SIS)
+);
+COMMENT ON TABLE movera.LCC_USU_SIS IS 'Tabela com o vínculo entre a Licença e os Usuários Sistema';
+COMMENT ON COLUMN movera.LCC_USU_SIS.NR_LCC_USU_SIS IS 'PK Tabela Licença Usuário Sistema';
+COMMENT ON COLUMN movera.LCC_USU_SIS.NR_USU_SIS IS 'FK Tabela Usuário Sistema';
+COMMENT ON COLUMN movera.LCC_USU_SIS.lic_id IS 'PK tabela Licença';
+
+
+ALTER SEQUENCE movera.seq_lcc_usu_sis OWNED BY movera.LCC_USU_SIS.NR_LCC_USU_SIS;
+
+CREATE SEQUENCE movera.seq_acss_usu;
+
+CREATE TABLE movera.ACSS_USU (
+                NR_ACSS_USU NUMERIC(8) NOT NULL DEFAULT nextval('movera.seq_acss_usu'),
+                NR_LCC_USU_SIS NUMERIC(5) NOT NULL,
+                DT_HH_ACSS_USU TIMESTAMP NOT NULL,
+                IN_AMB CHAR(1) NOT NULL,
+                CONSTRAINT nr_acss_usu PRIMARY KEY (NR_ACSS_USU)
+);
+COMMENT ON TABLE movera.ACSS_USU IS 'Tabela com o log de acesso dos usuários no sistema';
+COMMENT ON COLUMN movera.ACSS_USU.NR_ACSS_USU IS 'PK Tabela Acesso Usuário';
+COMMENT ON COLUMN movera.ACSS_USU.NR_LCC_USU_SIS IS 'FK Tabela Licença Usuário Sistema';
+COMMENT ON COLUMN movera.ACSS_USU.DT_HH_ACSS_USU IS 'Data e hora do acesso no sistema do usuário';
+COMMENT ON COLUMN movera.ACSS_USU.IN_AMB IS 'W=Web,
+M=Mobile';
+
+
+ALTER SEQUENCE movera.seq_acss_usu OWNED BY movera.ACSS_USU.NR_ACSS_USU;
+
+ALTER TABLE movera.PPESSOA ADD CONSTRAINT est_civ_ppessoa_fk
+FOREIGN KEY (NR_EST_CVL)
+REFERENCES movera.EST_CVL (nr_est_civ)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.PROP ADD CONSTRAINT pais_prop_fk
+FOREIGN KEY (nr_pais)
+REFERENCES movera.PAIS (NR_PAIS)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.AVLT ADD CONSTRAINT pais_avlt_fk
+FOREIGN KEY (nr_pais)
+REFERENCES movera.PAIS (NR_PAIS)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.CONTRATO ADD CONSTRAINT proposta_contrato_fk
+FOREIGN KEY (prop_id)
+REFERENCES movera.PROPOSTA (prop_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+/*
+Warning: Relationship has no columns to map:
+*/
+ALTER TABLE movera.CREDITO ADD CONSTRAINT contrato_credito_fk
+FOREIGN KEY ()
+REFERENCES movera.CONTRATO ()
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.CIDADE ADD CONSTRAINT estado_cidade_fk
+FOREIGN KEY (NR_EST)
+REFERENCES movera.UND_FDRL (NR_UND_FDRL)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.ENDEREÇO ADD CONSTRAINT cidade_endere_o_fk
+FOREIGN KEY (cid_id)
+REFERENCES movera.CIDADE (NR_CID)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.UND ADD CONSTRAINT cidade_unidade_fk
+FOREIGN KEY (NR_CID)
+REFERENCES movera.CIDADE (NR_CID)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.AG_BCO ADD CONSTRAINT cidade_agencia_fk
+FOREIGN KEY (NR_CID)
+REFERENCES movera.CIDADE (NR_CID)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.CONTA ADD CONSTRAINT agencia_conta_fk
+FOREIGN KEY (ag_id)
+REFERENCES movera.AG_BCO (NR_AG_BCO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.LCC_USU_SIS ADD CONSTRAINT licenca_licenca_usuario_fk
+FOREIGN KEY (lic_id)
+REFERENCES movera.LCC (NR_LCC)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.PRFL_UND_USU ADD CONSTRAINT unidade_perfil_unidade_fk
+FOREIGN KEY (NR_UND)
+REFERENCES movera.UND (NR_UND)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.OBJETO_FORMULARIO ADD CONSTRAINT objeto_objeto_formulario_fk
+FOREIGN KEY (nr_obj)
+REFERENCES movera.OBJETO (nr_obj)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.PROP ADD CONSTRAINT endere_o_prop_fk
+FOREIGN KEY (nr_endr)
+REFERENCES movera.ENDEREÇO (nr_endr)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.MENU FORMULARIO ADD CONSTRAINT formulario_menu_formulario_fk
+FOREIGN KEY (nr_frm)
+REFERENCES movera.FML (NR_FML)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.OBJETO_FORMULARIO ADD CONSTRAINT formulario_objeto_formulario_fk
+FOREIGN KEY (nr_frm)
+REFERENCES movera.FML (NR_FML)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.DOCUMENTO_PROPONENTE ADD CONSTRAINT documento_documento_cliente_fk
+FOREIGN KEY (nr_doc)
+REFERENCES movera.DOCUMENTO (nr_doc)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.MENU ADD CONSTRAINT menu_menu_fk
+FOREIGN KEY (NR_MENU_PAI)
+REFERENCES movera.MENU (NR_MENU)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.PRFL_MENU ADD CONSTRAINT menu_grupo_menu_fk
+FOREIGN KEY (NR_MENU)
+REFERENCES movera.MENU (NR_MENU)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.MENU FORMULARIO ADD CONSTRAINT menu_menu_formulario_fk
+FOREIGN KEY (nr_menu)
+REFERENCES movera.MENU (NR_MENU)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.PRPN_PRPT ADD CONSTRAINT empresa_cliente_empresa_fk
+FOREIGN KEY (nr_emp)
+REFERENCES movera.EMPRESA (nr_emp)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.CONTA ADD CONSTRAINT cliente_conta_fk
+FOREIGN KEY (NR_PSS)
+REFERENCES movera.PPESSOA (NR_PSS)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.USU_SIS ADD CONSTRAINT ppessoa_usu_sis_fk
+FOREIGN KEY (nr_pess)
+REFERENCES movera.PPESSOA (NR_PSS)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.PROP ADD CONSTRAINT ppessoa_prop_fk
+FOREIGN KEY (nr_pess)
+REFERENCES movera.PPESSOA (NR_PSS)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.AVLT ADD CONSTRAINT ppessoa_avlt_fk
+FOREIGN KEY (NR_PSS)
+REFERENCES movera.PPESSOA (NR_PSS)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.DOCUMENTO_PROPONENTE ADD CONSTRAINT prop_documento_proponente_fk
+FOREIGN KEY (nr_prop)
+REFERENCES movera.PROP (nr_prop)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.PRPN_PRPT ADD CONSTRAINT prop_proponente_empresa_fk
+FOREIGN KEY (nr_prop)
+REFERENCES movera.PROP (nr_prop)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.CREDITO ADD CONSTRAINT conta_credito_fk
+FOREIGN KEY (NR_CT)
+REFERENCES movera.CONTA (NR_CT)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.PRFL_MENU ADD CONSTRAINT grupo_grupo_menu_fk
+FOREIGN KEY (NR_PRFL)
+REFERENCES movera.PRFL (NR_PRFL)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.PRFL_UND_USU ADD CONSTRAINT perfil_perfil_unidade_fk
+FOREIGN KEY (NR_PRFL)
+REFERENCES movera.PRFL (NR_PRFL)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.LCC_USU_SIS ADD CONSTRAINT usuario_licenca_usuario_fk
+FOREIGN KEY (NR_USU_SIS)
+REFERENCES movera.USU_SIS (NR_USU_SIS)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.PRFL_UND_USU ADD CONSTRAINT usu_perfil_unidade_fk
+FOREIGN KEY (NR_USU_SIS)
+REFERENCES movera.USU_SIS (NR_USU_SIS)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE movera.ACSS_USU ADD CONSTRAINT licenca_usuario_acesso_usuario_fk
+FOREIGN KEY (NR_LCC_USU_SIS)
+REFERENCES movera.LCC_USU_SIS (NR_LCC_USU_SIS)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;

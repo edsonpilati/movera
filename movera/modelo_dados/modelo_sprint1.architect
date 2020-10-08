@@ -135,7 +135,7 @@ M=Mobile</remarks>
   <table id="TAB33" populated="true" UUID="912ee5d7-88fc-495a-94ca-7852ac7d59d9" name="UNIDADE" objectType="TABLE" physicalName="UND" >
    <remarks>Tabela com o cadastro das Unidades</remarks>
    <folder id="FOLTAB331" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL34" populated="true" UUID="60238dbc-5969-41e5-9082-0cbed0542d16" autoIncrement="true" autoIncrementSequenceName="SEQ_UND" defaultValue="" name="Número Unidade" nullable="0" physicalName="NR_UND" precision="4" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+    <column id="COL34" populated="true" UUID="60238dbc-5969-41e5-9082-0cbed0542d16" autoIncrement="true" autoIncrementSequenceName="SEQ_UND_1" defaultValue="" name="Número Unidade" nullable="0" physicalName="NR_UND" precision="4" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>PK Tabela Unidade</remarks>
     </column>
     <column id="COL35" populated="true" UUID="88df51bb-006e-4a17-82c8-e8d8560f1958" autoIncrement="false" autoIncrementSequenceName="UND_TX_NM_UND_seq" defaultValue="" name="Texto Nome Unidade" nullable="0" physicalName="TX_NM_UND" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -211,7 +211,7 @@ M=Mobile</remarks>
  <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.1892071150027206" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="1.1892071150027206" viewportX="897" viewportY="69" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="643" y="399" bgColor="0xe8cfdb" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB8" x="314" y="174" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB13" x="272" y="618" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>

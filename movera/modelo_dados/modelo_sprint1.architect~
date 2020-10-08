@@ -19,11 +19,11 @@
     <column id="COL3" populated="true" UUID="ccfe1e22-e1b1-4e6c-8c13-f63d43751125" autoIncrement="false" autoIncrementSequenceName="PRFL_UND_USU_SIS_NR_PRFL_seq" defaultValue="" name="Número Perfil" nullable="0" physicalName="NR_PRFL" precision="4" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>FK tabela Perfil</remarks>
     </column>
-    <column id="COL4" populated="true" UUID="ff3d490e-4f28-449d-84db-edd70655386e" autoIncrement="false" autoIncrementSequenceName="PRFL_UND_USU_SIS_NR_UND_seq" defaultValue="" name="Número Unidade" nullable="1" physicalName="NR_UND" precision="5" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
-     <remarks>FK tabela Unidade</remarks>
-    </column>
-    <column id="COL5" populated="true" UUID="bb1bd86f-dc5d-46bd-b30a-ae55948d6fbf" autoIncrement="false" autoIncrementSequenceName="seq_usu" defaultValue="" name="Número Usuário Sistema" nullable="0" physicalName="NR_USU_SIS" precision="6" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL4" populated="true" UUID="bb1bd86f-dc5d-46bd-b30a-ae55948d6fbf" autoIncrement="false" autoIncrementSequenceName="seq_usu" defaultValue="" name="Número Usuário Sistema" nullable="0" physicalName="NR_USU_SIS" precision="6" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>FK tabela Usuario Sistema</remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="05e66bec-8983-4f8f-a462-d870d79af749" autoIncrement="false" autoIncrementSequenceName="SEQ_UND" defaultValue="" name="Número Unidade" nullable="0" physicalName="NR_UND" precision="4" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+     <remarks>PK Tabela Unidade</remarks>
     </column>
     </folder>
     <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -135,8 +135,8 @@ M=Mobile</remarks>
   <table id="TAB33" populated="true" UUID="912ee5d7-88fc-495a-94ca-7852ac7d59d9" name="UNIDADE" objectType="TABLE" physicalName="UND" >
    <remarks>Tabela com o cadastro das Unidades</remarks>
    <folder id="FOLTAB331" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL34" populated="true" UUID="edbf2b7b-759b-49c1-ae79-2c7c29b7105a" autoIncrement="true" autoIncrementSequenceName="seq_und" defaultValue="" name="Número Unidade" nullable="0" physicalName="NR_UND" precision="5" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
-     <remarks>PK tabela Unidade</remarks>
+    <column id="COL34" populated="true" UUID="60238dbc-5969-41e5-9082-0cbed0542d16" autoIncrement="false" autoIncrementSequenceName="SEQ_UND" defaultValue="" name="Número Unidade" nullable="0" physicalName="NR_UND" precision="4" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+     <remarks>PK Tabela Unidade</remarks>
     </column>
     <column id="COL35" populated="true" UUID="88df51bb-006e-4a17-82c8-e8d8560f1958" autoIncrement="false" autoIncrementSequenceName="UND_TX_NM_UND_seq" defaultValue="" name="Texto Nome Unidade" nullable="0" physicalName="TX_NM_UND" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Nome da Unidade</remarks>
@@ -151,7 +151,7 @@ M=Mobile</remarks>
     </folder>
     <folder id="FOLTAB334" populated="true" name="Indices" physicalName="Indices" type="4">
     <index id="IDX37" populated="true" UUID="e4ca20d8-e1aa-4afd-8f21-80a4a6d9e9b5" clustered="false" name="NR_UND" physicalName="nr_und" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC38" populated="true" UUID="b285e41c-cacd-416a-a23f-0c5ee17ce51a" ascendingOrDescending="UNSPECIFIED" column-ref="COL34" name="Número Unidade" physicalName="NR_UND" />
+     <index-column id="IDC38" populated="true" UUID="0fbd9a04-f24b-42f7-9091-233d765c25bb" ascendingOrDescending="UNSPECIFIED" column-ref="COL34" name="Número Unidade" physicalName="NR_UND" />
     </index>
    </folder>
   </table>
@@ -189,29 +189,29 @@ M=Mobile</remarks>
   </table>
   <relationships>
    <relationship id="REL48" populated="true" UUID="66c6ba0a-e4f9-4a4d-9a64-43c51242c6d6" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="6" identifying="false" name="PRFL_PRFL_UND_USU_FK" physicalName="PRFL_PRFL_UND_USU_FK" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP49" populated="true" UUID="8655b274-013c-4c68-908c-00b6de322e0d" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
+    <column-mapping id="CMP49" populated="true" UUID="7302ec31-c119-42b7-bb72-6eb9640e41d2" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
    </relationship>
-   <relationship id="REL50" populated="true" UUID="02cdd02d-d077-47e8-ba8c-3462f5853fa3" deferrability="7" deleteRule="3" fk-table-ref="TAB19" fkCardinality="7" identifying="false" name="PRFL_PRFL_MENU_fk" physicalName="PRFL_PRFL_MENU_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP51" populated="true" UUID="0111b7bf-a566-4dcf-a796-eb479fe73159" fk-column-ref="COL22" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
+   <relationship id="REL50" populated="true" UUID="02cdd02d-d077-47e8-ba8c-3462f5853fa3" deferrability="7" deleteRule="3" fk-table-ref="TAB19" fkCardinality="7" identifying="false" name="PRFL_PRFL_MENU_FK" physicalName="PRFL_PRFL_MENU_FK" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP51" populated="true" UUID="b46f8ecb-3346-41ae-9ade-b5c9526f9b11" fk-column-ref="COL22" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
    </relationship>
    <relationship id="REL52" populated="true" UUID="2e3058f1-6c2f-44b5-b30b-a81e41c85bdf" deferrability="7" deleteRule="3" fk-table-ref="TAB19" fkCardinality="7" identifying="false" name="MENU_PRFL_MENU_FK" physicalName="MENU_PRFL_MENU_FK" pk-table-ref="TAB13" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP53" populated="true" UUID="374e3c59-6615-417b-b53e-c81280713869" fk-column-ref="COL21" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL14" />
+    <column-mapping id="CMP53" populated="true" UUID="5247933d-b304-42a2-ba7f-1b57709fd13f" fk-column-ref="COL21" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL14" />
    </relationship>
    <relationship id="REL54" populated="true" UUID="85ed15c0-3e47-473e-910c-bde6eb45734a" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="USU_SIS_PRFL_UND_USU_FK" physicalName="USU_SIS_PRFL_UND_USU_FK" pk-table-ref="TAB25" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP55" populated="true" UUID="30ac4b1a-9002-4b1c-9640-faeb400bf7e1" fk-column-ref="COL5" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL26" />
+    <column-mapping id="CMP55" populated="true" UUID="d5eb33fa-decb-41b4-960b-79fa2f2f5ea8" fk-column-ref="COL4" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL26" />
    </relationship>
-   <relationship id="REL56" populated="true" UUID="7577b55b-3f85-4374-b874-8d964f222bd0" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="UND_PRFL_UND_USU_FK" physicalName="UND_PRFL_UND_USU_FK" pk-table-ref="TAB33" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP57" populated="true" UUID="baaabd28-f2ae-4392-8e62-e408ce2f458a" fk-column-ref="COL4" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL34" />
+   <relationship id="REL56" populated="true" UUID="4cf0e97b-eaaa-40df-97f3-8b295687e6e6" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="UND_PRFL_UND_USU_SIS_fk" physicalName="UND_PRFL_UND_USU_SIS_fk" pk-table-ref="TAB33" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP57" populated="true" UUID="86f8c3a8-7836-4cd2-9903-4bbef99f2012" fk-column-ref="COL5" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL34" />
    </relationship>
    <relationship id="REL58" populated="true" UUID="5b4ad576-8531-4cbc-bd9a-03638ab15508" deferrability="7" deleteRule="3" fk-table-ref="TAB25" fkCardinality="7" identifying="false" name="PSS_USU_SIS_FK" physicalName="PSS_USU_SIS_FK" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP59" populated="true" UUID="30021260-3f52-4d11-85a1-5965ad3ac2b9" fk-column-ref="COL30" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
+    <column-mapping id="CMP59" populated="true" UUID="78ce3ec1-7e7b-493b-8757-3874c295b375" fk-column-ref="COL30" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
    </relationship>
   </relationships>
  </target-database>
  <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.1892071150027206" viewportX="220" viewportY="109" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="1.1892071150027206" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="643" y="399" bgColor="0xe8cfdb" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB8" x="314" y="174" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB13" x="272" y="618" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
@@ -219,12 +219,12 @@ M=Mobile</remarks>
   <table-pane table-ref="TAB25" x="1108" y="345" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB33" x="936" y="137" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB39" x="1410" y="102" bgColor="0xdfedce" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-link relationship-ref="REL54" pkConnection="0.7294117647058823" fkConnection="0.2235294117647059" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL48" pkConnection="0.8149779735682819" fkConnection="0.11743772241992882" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL52" pkConnection="0.4793388429752066" fkConnection="0.5097276264591439" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL56" pkConnection="0.42738589211618255" fkConnection="0.5729537366548043" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL58" pkConnection="0.43462897526501765" fkConnection="0.5373665480427047" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL50" pkConnection="0.4666666666666667" fkConnection="0.5330739299610895" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL54" pkConnection="0.7294117647058823" fkConnection="0.2235294117647059" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL48" pkConnection="0.8149779735682819" fkConnection="0.11743772241992882" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL52" pkConnection="0.4793388429752066" fkConnection="0.5097276264591439" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL58" pkConnection="0.43462897526501765" fkConnection="0.5373665480427047" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL50" pkConnection="0.4666666666666667" fkConnection="0.5330739299610895" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL56" pkConnection="0.36666666666666664" fkConnection="0.6074498567335244" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">

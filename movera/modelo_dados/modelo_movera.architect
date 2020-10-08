@@ -432,17 +432,17 @@ M=Mobile</remarks>
      <remarks>1 = Sim
 0 = Não</remarks>
     </column>
-    <column id="COL114" populated="true" UUID="a7fb3027-b09c-4948-9208-886ac55e52c7" autoIncrement="false" autoIncrementSequenceName="seq_und" defaultValue="" name="Número Unidade Pai" nullable="0" physicalName="NR_UND_PAI" precision="5" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
-     <remarks>FK tabela Unidade</remarks>
-    </column>
-    <column id="COL115" populated="true" UUID="1261919f-5a9f-4fb2-b9d1-6b64a17a64d2" autoIncrement="false" autoIncrementSequenceName="SEQ_NR_TIP_UND" defaultValue="" name="Número Tipo Unidade" nullable="0" physicalName="NR_TIP_UND" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+    <column id="COL114" populated="true" UUID="1261919f-5a9f-4fb2-b9d1-6b64a17a64d2" autoIncrement="false" autoIncrementSequenceName="SEQ_NR_TIP_UND" defaultValue="" name="Número Tipo Unidade" nullable="0" physicalName="NR_TIP_UND" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>PK tabela Tipo Unidade</remarks>
     </column>
-    <column id="COL116" populated="true" UUID="0f472345-52bf-485f-8fc5-1f2d96870cfc" autoIncrement="false" autoIncrementSequenceName="UND_TX_TEL_UND_seq" defaultValue="" name="Texto Telefone Unidade" nullable="1" physicalName="TX_TEL_UND" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL115" populated="true" UUID="0f472345-52bf-485f-8fc5-1f2d96870cfc" autoIncrement="false" autoIncrementSequenceName="UND_TX_TEL_UND_seq" defaultValue="" name="Texto Telefone Unidade" nullable="1" physicalName="TX_TEL_UND" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Telefone da Unidade</remarks>
     </column>
-    <column id="COL117" populated="true" UUID="29bd9307-ffdb-4e13-9a87-83b98e0e2d2f" autoIncrement="false" autoIncrementSequenceName="UND_TX_EMAI_UND_seq" defaultValue="" name="Texto Email Unidade" nullable="1" physicalName="TX_EMAI_UND" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL116" populated="true" UUID="29bd9307-ffdb-4e13-9a87-83b98e0e2d2f" autoIncrement="false" autoIncrementSequenceName="UND_TX_EMAI_UND_seq" defaultValue="" name="Texto Email Unidade" nullable="1" physicalName="TX_EMAI_UND" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Email da Unidade</remarks>
+    </column>
+    <column id="COL117" populated="true" UUID="a7fb3027-b09c-4948-9208-886ac55e52c7" autoIncrement="false" autoIncrementSequenceName="seq_und" defaultValue="" name="Número Unidade Pai" nullable="0" physicalName="NR_UND_PAI" precision="5" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks>FK tabela Unidade</remarks>
     </column>
     </folder>
     <folder id="FOLTAB1083" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -1093,7 +1093,7 @@ F= Feminino</remarks>
     <column-mapping id="CMP308" populated="true" UUID="78995905-090a-4262-be51-9112cac8b023" fk-column-ref="COL203" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL109" />
    </relationship>
    <relationship id="REL309" populated="true" UUID="bc99e0d2-62ca-4bf4-a49b-3eec573daf37" deferrability="7" deleteRule="3" fk-table-ref="TAB108" fkCardinality="7" identifying="false" name="UND_UND_fk" physicalName="UND_UND_fk" pk-table-ref="TAB108" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP310" populated="true" UUID="6753000f-4d0a-4928-b73e-f5fff5dadaec" fk-column-ref="COL114" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL109" />
+    <column-mapping id="CMP310" populated="true" UUID="6753000f-4d0a-4928-b73e-f5fff5dadaec" fk-column-ref="COL117" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL109" />
    </relationship>
    <relationship id="REL311" populated="true" UUID="29ef8078-db68-495e-9413-2c3de20f90ef" deferrability="7" deleteRule="3" fk-table-ref="TAB127" fkCardinality="3" identifying="false" name="LICENCA_LICENCA_USUARIO_fk" physicalName="LICENCA_LICENCA_USUARIO_fk" pk-table-ref="TAB120" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP312" populated="true" UUID="dd71a2ed-5773-47ca-a87a-24c53b924428" fk-column-ref="COL130" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL121" />
@@ -1152,14 +1152,14 @@ F= Feminino</remarks>
     <column-mapping id="CMP347" populated="true" UUID="91048a30-7fd1-4157-9b94-4ee7842542cd" fk-column-ref="COL266" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL259" />
    </relationship>
    <relationship id="REL348" populated="true" UUID="8078724c-05d2-416d-992f-17e1ec3bdbd4" deferrability="7" deleteRule="3" fk-table-ref="TAB108" fkCardinality="6" identifying="false" name="TIP_UND_UND_fk" physicalName="TIP_UND_UND_fk" pk-table-ref="TAB268" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP349" populated="true" UUID="c5b41200-eb20-4be0-9e3a-7c6e44dc53b2" fk-column-ref="COL115" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL269" />
+    <column-mapping id="CMP349" populated="true" UUID="c5b41200-eb20-4be0-9e3a-7c6e44dc53b2" fk-column-ref="COL114" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL269" />
    </relationship>
   </relationships>
  </target-database>
  <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="movera"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.1892071150027206" viewportX="1985" viewportY="390" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="1.1892071150027206" viewportX="0" viewportY="1097" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="1132" y="1433" bgColor="0xdfedce" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB9" x="79" y="1815" bgColor="0xf6bcbc" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB15" x="697" y="1843" bgColor="0xb9bbf6" fgColor="0x000000" rounded="true" dashed="false"/>
@@ -1196,7 +1196,7 @@ F= Feminino</remarks>
   <table-pane table-ref="TAB256" x="2759" y="1691" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB258" x="2124" y="829" bgColor="0xc8b7ea" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB264" x="2516" y="625" bgColor="0xc8b7ea" fgColor="0x000000" rounded="true" dashed="false"/>
-  <table-pane table-ref="TAB268" x="183" y="1616" bgColor="0xbfd6ff" fgColor="0x000000" rounded="true" dashed="false"/>
+  <table-pane table-ref="TAB268" x="183" y="1608" bgColor="0xbfd6ff" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-link relationship-ref="REL289" pkConnection="0.23008849557522124" fkConnection="0.8591549295774648" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL297" pkConnection="0.3176470588235294" fkConnection="0.8591549295774648" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL299" pkConnection="0.352112676056338" fkConnection="0.6537102473498233" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="130"/>
@@ -1219,7 +1219,7 @@ F= Feminino</remarks>
   <table-link relationship-ref="REL319" pkConnection="0.7746478873239436" fkConnection="0.29292929292929293" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL279" pkConnection="0.45089285714285715" fkConnection="0.5516014234875445" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
   <table-link relationship-ref="REL307" pkConnection="0.2828282828282828" fkConnection="0.7529411764705882" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL275" pkConnection="0.18439716312056736" fkConnection="0.9294117647058824" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL275" pkConnection="0.24242424242424243" fkConnection="0.9294117647058824" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL283" pkConnection="0.16774193548387098" fkConnection="0.9176470588235294" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL336" pkConnection="0.17543859649122806" fkConnection="0.7244094488188977" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL295" pkConnection="0.9049586776859504" fkConnection="0.20848056537102475" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>

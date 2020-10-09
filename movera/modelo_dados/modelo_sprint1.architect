@@ -19,11 +19,14 @@
     <column id="COL3" populated="true" UUID="ccfe1e22-e1b1-4e6c-8c13-f63d43751125" autoIncrement="false" autoIncrementSequenceName="PRFL_UND_USU_SIS_NR_PRFL_seq" defaultValue="" name="Número Perfil" nullable="0" physicalName="NR_PRFL" precision="4" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>FK tabela Perfil</remarks>
     </column>
-    <column id="COL4" populated="true" UUID="bb1bd86f-dc5d-46bd-b30a-ae55948d6fbf" autoIncrement="false" autoIncrementSequenceName="seq_usu" defaultValue="" name="Número Usuário Sistema" nullable="0" physicalName="NR_USU_SIS" precision="6" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL4" populated="true" UUID="5a996c16-efa7-45f7-9a71-57d54395593d" autoIncrement="false" autoIncrementSequenceName="SEQ_UND" defaultValue="" name="Número Unidade" nullable="1" physicalName="NR_UND" precision="4" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+     <remarks>FK Tabela Unidade</remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="bb1bd86f-dc5d-46bd-b30a-ae55948d6fbf" autoIncrement="false" autoIncrementSequenceName="seq_usu" defaultValue="" name="Número Usuário Sistema" nullable="0" physicalName="NR_USU_SIS" precision="6" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>FK tabela Usuario Sistema</remarks>
     </column>
-    <column id="COL5" populated="true" UUID="05e66bec-8983-4f8f-a462-d870d79af749" autoIncrement="false" autoIncrementSequenceName="SEQ_UND" defaultValue="" name="Número Unidade" nullable="0" physicalName="NR_UND" precision="4" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
-     <remarks>PK Tabela Unidade</remarks>
+    <column id="COL6" populated="true" UUID="d5980cdf-3621-4716-88c6-10172ecb27ae" autoIncrement="false" autoIncrementSequenceName="PRFL_UND_USU_SIS_DT_HH_CAD_PRFL_UND_SIS_seq" defaultValue="" name="Data Hora Cadastro Perfil Unidade Sistema" nullable="0" physicalName="DT_HH_CAD_PRFL_UND_SIS" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Data hora Cadastro Perfil Usuário Sistema</remarks>
     </column>
     </folder>
     <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -31,200 +34,331 @@
     <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX6" populated="true" UUID="e39ca433-9411-4123-950e-c945b245c4ab" clustered="false" name="NR_PRFL_UND_USU_SIS" physicalName="nr_prfl_und_usu_sis" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC7" populated="true" UUID="99b63fc1-77c4-4088-85f4-b12dcec6dc3b" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="Número Perfil Unidade Usuário Sistema" physicalName="NR_PRFL_UND_USU_SIS" />
+    <index id="IDX7" populated="true" UUID="e39ca433-9411-4123-950e-c945b245c4ab" clustered="false" name="NR_PRFL_UND_USU_SIS" physicalName="nr_prfl_und_usu_sis" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC8" populated="true" UUID="99b63fc1-77c4-4088-85f4-b12dcec6dc3b" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="Número Perfil Unidade Usuário Sistema" physicalName="NR_PRFL_UND_USU_SIS" />
     </index>
    </folder>
   </table>
-  <table id="TAB8" populated="true" UUID="7a845b03-f203-4a23-b06e-f273332d2c00" name="PERFIL" objectType="TABLE" physicalName="PRFL" >
+  <table id="TAB9" populated="true" UUID="7a845b03-f203-4a23-b06e-f273332d2c00" name="PERFIL" objectType="TABLE" physicalName="PRFL" >
    <remarks>Tabela com o cadastro de perfis de usuário do sistema</remarks>
-   <folder id="FOLTAB81" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL9" populated="true" UUID="0b61d5d2-1456-46d1-9db1-4f7d8bc82571" autoIncrement="true" autoIncrementSequenceName="SEQ_PRFL_" defaultValue="" name="Número Perfil" nullable="0" physicalName="NR_PRFL" precision="4" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+   <folder id="FOLTAB91" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL10" populated="true" UUID="0b61d5d2-1456-46d1-9db1-4f7d8bc82571" autoIncrement="true" autoIncrementSequenceName="SEQ_PRFL_" defaultValue="" name="Número Perfil" nullable="0" physicalName="NR_PRFL" precision="4" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>PK tabela Perfil</remarks>
     </column>
-    <column id="COL10" populated="true" UUID="9467c484-9f6e-4e6e-a88c-ef006aa30dc1" autoIncrement="false" autoIncrementSequenceName="PRFL_TX_NM_PRFL_seq" defaultValue="" name="Texto Nome Perfil" nullable="0" physicalName="TX_NM_PRFL" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL11" populated="true" UUID="9467c484-9f6e-4e6e-a88c-ef006aa30dc1" autoIncrement="false" autoIncrementSequenceName="PRFL_TX_NM_PRFL_seq" defaultValue="" name="Texto Nome Perfil" nullable="0" physicalName="TX_NM_PRFL" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Nome Perfil</remarks>
     </column>
     </folder>
-    <folder id="FOLTAB83" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB93" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB82" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB92" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB84" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX11" populated="true" UUID="33a8bfa7-019d-47fc-9e78-e83494ccae13" clustered="false" name="NR_PRFL" physicalName="nr_prfl" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC12" populated="true" UUID="d5437e52-2e97-417c-b508-d2e1d6e21b15" ascendingOrDescending="UNSPECIFIED" column-ref="COL9" name="Número Perfil" physicalName="NR_PRFL" />
+    <folder id="FOLTAB94" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX12" populated="true" UUID="33a8bfa7-019d-47fc-9e78-e83494ccae13" clustered="false" name="NR_PRFL" physicalName="nr_prfl" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC13" populated="true" UUID="d5437e52-2e97-417c-b508-d2e1d6e21b15" ascendingOrDescending="UNSPECIFIED" column-ref="COL10" name="Número Perfil" physicalName="NR_PRFL" />
     </index>
    </folder>
   </table>
-  <table id="TAB13" populated="true" UUID="3b62224c-a29b-4850-8f58-00efadff3b21" name="MENU" objectType="TABLE" physicalName="MENU" >
+  <table id="TAB14" populated="true" UUID="3b62224c-a29b-4850-8f58-00efadff3b21" name="MENU" objectType="TABLE" physicalName="MENU" >
    <remarks>Cadastro de menus do sistema</remarks>
-   <folder id="FOLTAB131" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL14" populated="true" UUID="9acc93b7-1b98-495d-8105-cbb94063cc54" autoIncrement="true" autoIncrementSequenceName="SEQ_MENU" defaultValue="" name="Número Menu" nullable="0" physicalName="NR_MENU" precision="3" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+   <folder id="FOLTAB141" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL15" populated="true" UUID="9acc93b7-1b98-495d-8105-cbb94063cc54" autoIncrement="true" autoIncrementSequenceName="SEQ_MENU" defaultValue="" name="Número Menu" nullable="0" physicalName="NR_MENU" precision="3" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Pk tabela Menu</remarks>
     </column>
-    <column id="COL15" populated="true" UUID="299b0bc6-89ae-45d8-8e30-cf890954d8c3" autoIncrement="false" autoIncrementSequenceName="MENU_TX_DCR_MENU_seq" defaultValue="" name="Texto Descrição Menu" nullable="0" physicalName="TX_DCR_MENU" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL16" populated="true" UUID="299b0bc6-89ae-45d8-8e30-cf890954d8c3" autoIncrement="false" autoIncrementSequenceName="MENU_TX_DCR_MENU_seq" defaultValue="" name="Texto Descrição Menu" nullable="0" physicalName="TX_DCR_MENU" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Descrição menu</remarks>
     </column>
-    <column id="COL16" populated="true" UUID="ae6ec95b-a045-4390-bfd9-64c6d8a33bd8" autoIncrement="false" autoIncrementSequenceName="MENU_IN_SIS_MENU_seq" defaultValue="" name="Indicador Sistema Menu" nullable="0" physicalName="IN_SIS_MENU" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+    <column id="COL17" populated="true" UUID="ae6ec95b-a045-4390-bfd9-64c6d8a33bd8" autoIncrement="false" autoIncrementSequenceName="MENU_IN_SIS_MENU_seq" defaultValue="" name="Indicador Sistema Menu" nullable="0" physicalName="IN_SIS_MENU" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
      <remarks>W=Web
 M=Mobile</remarks>
     </column>
     </folder>
-    <folder id="FOLTAB133" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB143" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB132" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB142" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB134" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX17" populated="true" UUID="e3e6cefb-f1d6-4be5-901c-928bd3bd3f7c" clustered="false" name="NR_MENU" physicalName="nr_menu" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC18" populated="true" UUID="d653496c-07c5-40d9-beca-2b9ec4f187a8" ascendingOrDescending="UNSPECIFIED" column-ref="COL14" name="Número Menu" physicalName="NR_MENU" />
+    <folder id="FOLTAB144" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX18" populated="true" UUID="e3e6cefb-f1d6-4be5-901c-928bd3bd3f7c" clustered="false" name="NR_MENU" physicalName="nr_menu" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC19" populated="true" UUID="d653496c-07c5-40d9-beca-2b9ec4f187a8" ascendingOrDescending="UNSPECIFIED" column-ref="COL15" name="Número Menu" physicalName="NR_MENU" />
     </index>
    </folder>
   </table>
-  <table id="TAB19" populated="true" UUID="6ee669ff-54d7-464f-ae4a-7af0371943d5" name="PERFIL_MENU" objectType="TABLE" physicalName="PRFL_MENU" >
+  <table id="TAB20" populated="true" UUID="6ee669ff-54d7-464f-ae4a-7af0371943d5" name="PERFIL_MENU" objectType="TABLE" physicalName="PRFL_MENU" >
    <remarks>Tabela com o vínculo entre os perfis e os menus exibidos no sistema</remarks>
-   <folder id="FOLTAB191" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL20" populated="true" UUID="5a26767e-684d-4832-ad8d-9f945d2de6e3" autoIncrement="true" autoIncrementSequenceName="SEQ_PRFL_MENU" defaultValue="" name="Número Perfil Menu" nullable="0" physicalName="NR_PRFL_MENU" precision="4" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+   <folder id="FOLTAB201" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL21" populated="true" UUID="5a26767e-684d-4832-ad8d-9f945d2de6e3" autoIncrement="true" autoIncrementSequenceName="SEQ_PRFL_MENU" defaultValue="" name="Número Perfil Menu" nullable="0" physicalName="NR_PRFL_MENU" precision="4" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>PK tabela Perfil Menu</remarks>
     </column>
-    <column id="COL21" populated="true" UUID="f8c7f1aa-ee15-4c58-858a-c1df9dd7aefa" autoIncrement="false" autoIncrementSequenceName="PRFL_MENU_NR_MENU_seq" defaultValue="" name="Número Menu" nullable="0" physicalName="NR_MENU" precision="3" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL22" populated="true" UUID="f8c7f1aa-ee15-4c58-858a-c1df9dd7aefa" autoIncrement="false" autoIncrementSequenceName="PRFL_MENU_NR_MENU_seq" defaultValue="" name="Número Menu" nullable="0" physicalName="NR_MENU" precision="3" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>FK tabela Menu</remarks>
     </column>
-    <column id="COL22" populated="true" UUID="17415a78-b522-441b-a48e-604a4ec00781" autoIncrement="false" autoIncrementSequenceName="SEQ_PRFL" defaultValue="" name="Número Perfil" nullable="0" physicalName="NR_PRFL" precision="4" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+    <column id="COL23" populated="true" UUID="17415a78-b522-441b-a48e-604a4ec00781" autoIncrement="false" autoIncrementSequenceName="SEQ_PRFL" defaultValue="" name="Número Perfil" nullable="0" physicalName="NR_PRFL" precision="4" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>FK tabela Perfil</remarks>
     </column>
     </folder>
-    <folder id="FOLTAB193" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB203" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB192" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB202" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB194" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX23" populated="true" UUID="2ed760e7-5145-4312-b1e0-37f09ef3536a" clustered="false" name="NR_PRFL_MENU" physicalName="nr_prfl_menu" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC24" populated="true" UUID="1b8fdfca-da87-4466-bddb-0eb801e981f4" ascendingOrDescending="UNSPECIFIED" column-ref="COL20" name="Número Perfil Menu" physicalName="NR_PRFL_MENU" />
+    <folder id="FOLTAB204" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX24" populated="true" UUID="2ed760e7-5145-4312-b1e0-37f09ef3536a" clustered="false" name="NR_PRFL_MENU" physicalName="nr_prfl_menu" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC25" populated="true" UUID="1b8fdfca-da87-4466-bddb-0eb801e981f4" ascendingOrDescending="UNSPECIFIED" column-ref="COL21" name="Número Perfil Menu" physicalName="NR_PRFL_MENU" />
     </index>
    </folder>
   </table>
-  <table id="TAB25" populated="true" UUID="2432a625-b7fb-4d20-a2cc-4eb5c6ebf7d2" name="USUÁRIO SISTEMA" objectType="TABLE" physicalName="USU_SIS" >
+  <table id="TAB26" populated="true" UUID="2432a625-b7fb-4d20-a2cc-4eb5c6ebf7d2" name="USUÁRIO SISTEMA" objectType="TABLE" physicalName="USU_SIS" >
    <remarks>Tabela com o cadastro de usuários do sistema</remarks>
-   <folder id="FOLTAB251" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL26" populated="true" UUID="3edd7aac-cc5f-43a1-b8f2-8b47a24bfd2b" autoIncrement="true" autoIncrementSequenceName="SEQ_USU_SIS" defaultValue="" name="Número Usuário Sistema" nullable="0" physicalName="NR_USU_SIS" precision="6" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+   <folder id="FOLTAB261" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL27" populated="true" UUID="3edd7aac-cc5f-43a1-b8f2-8b47a24bfd2b" autoIncrement="true" autoIncrementSequenceName="SEQ_USU_SIS" defaultValue="" name="Número Usuário Sistema" nullable="0" physicalName="NR_USU_SIS" precision="6" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Pk tabela Usuário Sistema</remarks>
     </column>
-    <column id="COL27" populated="true" UUID="b8867cee-930d-4604-b5bb-137d7d521798" autoIncrement="false" autoIncrementSequenceName="USU_SIS_TX_SNH_USU_SIS_seq" defaultValue="" name="Texto Senha Usuário Sistema" nullable="0" physicalName="TX_SNH_USU_SIS" precision="10" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL28" populated="true" UUID="b8867cee-930d-4604-b5bb-137d7d521798" autoIncrement="false" autoIncrementSequenceName="USU_SIS_TX_SNH_USU_SIS_seq" defaultValue="" name="Texto Senha Usuário Sistema" nullable="0" physicalName="TX_SNH_USU_SIS" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Senha do usuário sistema</remarks>
     </column>
-    <column id="COL28" populated="true" UUID="82d9f308-e262-44c4-9d45-e764de38e34f" autoIncrement="false" autoIncrementSequenceName="USU_SIS_IN_USU_SIS_ATI_seq" defaultValue="1" name="Indicador usuário sistema ativo" nullable="0" physicalName="IN_USU_SIS_ATI" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+    <column id="COL29" populated="true" UUID="82d9f308-e262-44c4-9d45-e764de38e34f" autoIncrement="false" autoIncrementSequenceName="USU_SIS_IN_USU_SIS_ATI_seq" defaultValue="1" name="Indicador usuário sistema ativo" nullable="0" physicalName="IN_USU_SIS_ATI" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
      <remarks>Ativo(1 =Sim ou 0=Não)</remarks>
     </column>
-    <column id="COL29" populated="true" UUID="99e6a1e0-c5da-4324-82c6-f4e3d4fb687a" autoIncrement="false" autoIncrementSequenceName="USU_SIS_CD_CHV_SSBB_seq" defaultValue="" name="Código Chave Sisbb" nullable="1" physicalName="CD_CHV_SSBB" precision="8" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL30" populated="true" UUID="99e6a1e0-c5da-4324-82c6-f4e3d4fb687a" autoIncrement="false" autoIncrementSequenceName="USU_SIS_CD_CHV_SSBB_seq" defaultValue="" name="Código Chave Sisbb" nullable="1" physicalName="CD_CHV_SSBB" precision="8" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Chave sissbb</remarks>
     </column>
-    <column id="COL30" populated="true" UUID="2daa384a-922d-46ea-a98c-1da59009399d" autoIncrement="false" autoIncrementSequenceName="seq_pess" defaultValue="" name="Número Pessoa" nullable="0" physicalName="NR_PSS" precision="8" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL31" populated="true" UUID="2daa384a-922d-46ea-a98c-1da59009399d" autoIncrement="false" autoIncrementSequenceName="seq_pess" defaultValue="" name="Número Pessoa" nullable="0" physicalName="NR_PSS" precision="8" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>PK tabela pessoa</remarks>
     </column>
+    <column id="COL32" populated="true" UUID="e1bc5543-32f0-4b09-b6e4-ce2a628b49c6" autoIncrement="false" autoIncrementSequenceName="USU_SIS_DT_HH_CAD_USU_SIS_seq" defaultValue="" name="Data Hora Cadastro Usuário Sistema" nullable="0" physicalName="DT_HH_CAD_USU_SIS" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Data Hora Cadastro Usuário Sistema</remarks>
+    </column>
     </folder>
-    <folder id="FOLTAB253" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB263" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB252" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB262" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB254" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX31" populated="true" UUID="8f230cfa-a185-48d5-ad95-70d06ac16081" clustered="false" name="NR_USU_SIS" physicalName="nr_usu_sis" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC32" populated="true" UUID="a96421d8-2cff-4e9b-8af9-44cb2c211fba" ascendingOrDescending="UNSPECIFIED" column-ref="COL26" name="Número Usuário Sistema" physicalName="NR_USU_SIS" />
+    <folder id="FOLTAB264" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX33" populated="true" UUID="8f230cfa-a185-48d5-ad95-70d06ac16081" clustered="false" name="NR_USU_SIS" physicalName="nr_usu_sis" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC34" populated="true" UUID="a96421d8-2cff-4e9b-8af9-44cb2c211fba" ascendingOrDescending="UNSPECIFIED" column-ref="COL27" name="Número Usuário Sistema" physicalName="NR_USU_SIS" />
     </index>
    </folder>
   </table>
-  <table id="TAB33" populated="true" UUID="912ee5d7-88fc-495a-94ca-7852ac7d59d9" name="UNIDADE" objectType="TABLE" physicalName="UND" >
+  <table id="TAB35" populated="true" UUID="912ee5d7-88fc-495a-94ca-7852ac7d59d9" name="UNIDADE" objectType="TABLE" physicalName="UND" >
    <remarks>Tabela com o cadastro das Unidades</remarks>
-   <folder id="FOLTAB331" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL34" populated="true" UUID="60238dbc-5969-41e5-9082-0cbed0542d16" autoIncrement="true" autoIncrementSequenceName="SEQ_UND_1" defaultValue="" name="Número Unidade" nullable="0" physicalName="NR_UND" precision="4" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+   <folder id="FOLTAB351" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL36" populated="true" UUID="60238dbc-5969-41e5-9082-0cbed0542d16" autoIncrement="true" autoIncrementSequenceName="SEQ_UND_1" defaultValue="" name="Número Unidade" nullable="0" physicalName="NR_UND" precision="4" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>PK Tabela Unidade</remarks>
     </column>
-    <column id="COL35" populated="true" UUID="88df51bb-006e-4a17-82c8-e8d8560f1958" autoIncrement="false" autoIncrementSequenceName="UND_TX_NM_UND_seq" defaultValue="" name="Texto Nome Unidade" nullable="0" physicalName="TX_NM_UND" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks>Nome da Unidade</remarks>
+    <column id="COL37" populated="true" UUID="c20b4ad9-daea-4e77-b72f-62e3df7b9ad9" autoIncrement="false" autoIncrementSequenceName="seq_cid" defaultValue="" name="Número Cidade" nullable="0" physicalName="NR_CID" precision="4" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks>FK tabela Cidade</remarks>
     </column>
-    <column id="COL36" populated="true" UUID="1f4a1ca0-e218-49c3-8951-eab3f984b032" autoIncrement="false" autoIncrementSequenceName="UND_CD_UND_seq" defaultValue="" name="Código Unidade" nullable="0" physicalName="CD_UND" precision="4" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL38" populated="true" UUID="4da9aed6-9b2a-49a7-8c13-a74370491db0" autoIncrement="false" autoIncrementSequenceName="UND_TX_EMAI_UND_seq" defaultValue="" name="Texto Email Unidade" nullable="1" physicalName="TX_EMAI_UND" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Email da Unidade</remarks>
+    </column>
+    <column id="COL39" populated="true" UUID="d316aa3c-dd2d-46af-a684-4d29a552454e" autoIncrement="false" autoIncrementSequenceName="UND_CD_UND_seq" defaultValue="" name="Código Unidade" nullable="0" physicalName="CD_UND" precision="4" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Código da unidade</remarks>
     </column>
+    <column id="COL40" populated="true" UUID="52fe2c92-54d1-451d-9ec6-da49f2d2e584" autoIncrement="false" autoIncrementSequenceName="UND_TX_TEL_UND_seq" defaultValue="" name="Texto Telefone Unidade" nullable="1" physicalName="TX_TEL_UND" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Telefone da Unidade</remarks>
+    </column>
+    <column id="COL41" populated="true" UUID="f4b683ea-0e58-46e6-aa33-925fcec143a4" autoIncrement="false" autoIncrementSequenceName="UND_TX_NM_UND_seq" defaultValue="" name="Texto Nome Unidade" nullable="0" physicalName="TX_NM_UND" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome da Unidade</remarks>
+    </column>
+    <column id="COL42" populated="true" UUID="875635dd-a555-4df1-adfc-70b33aba8fbc" autoIncrement="false" autoIncrementSequenceName="UND_IN_UND_ATV_seq" defaultValue="" name="Indicador Unidade Ativa" nullable="0" physicalName="IN_UND_ATV" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks>1 = Sim
+0 = Não</remarks>
+    </column>
+    <column id="COL43" populated="true" UUID="5f48f790-0ff4-457e-aa6c-b25c7eefab4b" autoIncrement="false" autoIncrementSequenceName="UND_DT_HH_CAD_UND_seq" defaultValue="" name="Data Hora Cadastro Unidade" nullable="0" physicalName="DT_HH_CAD_UND" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Data Hora Cadastro Unidade</remarks>
+    </column>
+    <column id="COL44" populated="true" UUID="e360b179-f09f-4d38-baee-3195a3aee382" autoIncrement="false" autoIncrementSequenceName="UND_TX_JST_UND_IATV_seq" defaultValue="" name="Texto Justificativa Unidade Inativa" nullable="0" physicalName="TX_JST_UND_IATV" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Texto com a justificativa da inatividade da unidade</remarks>
+    </column>
+    <column id="COL45" populated="true" UUID="d2029cc3-8d6c-4b6f-83d9-a79cb3207896" autoIncrement="false" autoIncrementSequenceName="SEQ_NR_TIP_UND" defaultValue="" name="Número Tipo Unidade" nullable="0" physicalName="NR_TIP_UND" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+     <remarks>PK tabela Tipo Unidade</remarks>
+    </column>
     </folder>
-    <folder id="FOLTAB333" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB353" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB332" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB352" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB334" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX37" populated="true" UUID="e4ca20d8-e1aa-4afd-8f21-80a4a6d9e9b5" clustered="false" name="NR_UND" physicalName="nr_und" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC38" populated="true" UUID="0fbd9a04-f24b-42f7-9091-233d765c25bb" ascendingOrDescending="UNSPECIFIED" column-ref="COL34" name="Número Unidade" physicalName="NR_UND" />
+    <folder id="FOLTAB354" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX46" populated="true" UUID="e4ca20d8-e1aa-4afd-8f21-80a4a6d9e9b5" clustered="false" name="NR_UND" physicalName="nr_und" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC47" populated="true" UUID="0fbd9a04-f24b-42f7-9091-233d765c25bb" ascendingOrDescending="UNSPECIFIED" column-ref="COL36" name="Número Unidade" physicalName="NR_UND" />
     </index>
    </folder>
   </table>
-  <table id="TAB39" populated="true" UUID="0ee55e1f-66b1-4db1-bbaa-8ea8b8c1d58a" name="PESSOA" objectType="TABLE" physicalName="PSS" >
+  <table id="TAB48" populated="true" UUID="0ee55e1f-66b1-4db1-bbaa-8ea8b8c1d58a" name="PESSOA" objectType="TABLE" physicalName="PSS" >
    <remarks>Tabela com o cadastro das pessoas</remarks>
-   <folder id="FOLTAB391" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL40" populated="true" UUID="573ad616-ace3-4264-bb57-c84436103239" autoIncrement="true" autoIncrementSequenceName="SEQ_PSS" defaultValue="" name="Número Pessoa" nullable="0" physicalName="NR_PSS" precision="8" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+   <folder id="FOLTAB481" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL49" populated="true" UUID="573ad616-ace3-4264-bb57-c84436103239" autoIncrement="true" autoIncrementSequenceName="SEQ_PSS" defaultValue="" name="Número Pessoa" nullable="0" physicalName="NR_PSS" precision="8" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>PK tabela pessoa</remarks>
     </column>
-    <column id="COL41" populated="true" UUID="7932ed63-ff25-4425-b22e-75eff4237577" autoIncrement="false" autoIncrementSequenceName="PSS_TX_NM_PSS_seq" defaultValue="" name="Texto Nome Pessoa" nullable="0" physicalName="TX_NM_PSS" precision="60" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL50" populated="true" UUID="7932ed63-ff25-4425-b22e-75eff4237577" autoIncrement="false" autoIncrementSequenceName="PSS_TX_NM_PSS_seq" defaultValue="" name="Texto Nome Pessoa" nullable="0" physicalName="TX_NM_PSS" precision="60" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Nome da Pessoa</remarks>
     </column>
-    <column id="COL42" populated="true" UUID="22fd9116-9f28-40ce-a2ea-a2dd0e085cb3" autoIncrement="false" autoIncrementSequenceName="PSS_TX_CPF_PSS_seq" defaultValue="" name="Texto CPF pessoa" nullable="0" physicalName="TX_CPF_PSS" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL51" populated="true" UUID="22fd9116-9f28-40ce-a2ea-a2dd0e085cb3" autoIncrement="false" autoIncrementSequenceName="PSS_TX_CPF_PSS_seq" defaultValue="" name="Texto CPF pessoa" nullable="0" physicalName="TX_CPF_PSS" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Cpf da Pessoa</remarks>
     </column>
-    <column id="COL43" populated="true" UUID="5a3fe103-cdc7-420f-8406-7c539800043b" autoIncrement="false" autoIncrementSequenceName="PSS_TX_TCEL_PSS_seq" defaultValue="" name="Texto Telefone Celular Pessoa" nullable="0" physicalName="TX_TCEL_PSS" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL52" populated="true" UUID="5a3fe103-cdc7-420f-8406-7c539800043b" autoIncrement="false" autoIncrementSequenceName="PSS_TX_TCEL_PSS_seq" defaultValue="" name="Texto Telefone Celular Pessoa" nullable="0" physicalName="TX_TCEL_PSS" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>telefone celular da pessoa</remarks>
     </column>
-    <column id="COL44" populated="true" UUID="f618a767-fed7-4f4b-87ce-b46844c80df6" autoIncrement="false" autoIncrementSequenceName="PSS_TX_EMAI_PSS_seq" defaultValue="" name="Texto Email Pessoa" nullable="1" physicalName="TX_EMAI_PSS" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL53" populated="true" UUID="f618a767-fed7-4f4b-87ce-b46844c80df6" autoIncrement="false" autoIncrementSequenceName="PSS_TX_EMAI_PSS_seq" defaultValue="" name="Texto Email Pessoa" nullable="1" physicalName="TX_EMAI_PSS" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Email da pessoa</remarks>
     </column>
-    <column id="COL45" populated="true" UUID="da3d09d1-853c-4887-a6c3-2c5347b51fe8" autoIncrement="false" autoIncrementSequenceName="PSS_DT_HH_CAD_PSS_seq" defaultValue="" name="Data Hora Cadastro Pessoa" nullable="0" physicalName="DT_HH_CAD_PSS" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL54" populated="true" UUID="da3d09d1-853c-4887-a6c3-2c5347b51fe8" autoIncrement="false" autoIncrementSequenceName="PSS_DT_HH_CAD_PSS_seq" defaultValue="" name="Data Hora Cadastro Pessoa" nullable="0" physicalName="DT_HH_CAD_PSS" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Data hora cadastro pessoa</remarks>
     </column>
     </folder>
-    <folder id="FOLTAB393" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB483" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB392" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB482" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB394" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX46" populated="true" UUID="f552a794-79e3-4c52-8f42-91a1530e001a" clustered="false" name="NR_PSS" physicalName="nr_pss" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC47" populated="true" UUID="d573fe36-d307-4925-8c70-5556cf86b8cf" ascendingOrDescending="UNSPECIFIED" column-ref="COL40" name="Número Pessoa" physicalName="NR_PSS" />
+    <folder id="FOLTAB484" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX55" populated="true" UUID="f552a794-79e3-4c52-8f42-91a1530e001a" clustered="false" name="NR_PSS" physicalName="nr_pss" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC56" populated="true" UUID="d573fe36-d307-4925-8c70-5556cf86b8cf" ascendingOrDescending="UNSPECIFIED" column-ref="COL49" name="Número Pessoa" physicalName="NR_PSS" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB57" populated="true" UUID="2e781fcd-cb22-49b6-a89b-6bf9670a6e7e" name="UNIDADE FEDERAL" objectType="TABLE" physicalName="UND_FDRL" >
+   <remarks>Tabela com o cadastro dos estados</remarks>
+   <folder id="FOLTAB571" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL58" populated="true" UUID="8f3e3fcd-f42f-4355-a8ea-91cb140583e9" autoIncrement="true" autoIncrementSequenceName="SEQ_UND_FDRL" defaultValue="" name="Número Unidade Federal" nullable="0" physicalName="NR_UND_FDRL" precision="2" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks>PK tabela Unidade Federal</remarks>
+    </column>
+    <column id="COL59" populated="true" UUID="1b9790ee-a9de-4299-835a-c0c08eca21b9" autoIncrement="false" autoIncrementSequenceName="UND_FDRL_CD_UND_FDRL_seq" defaultValue="" name="Código Unidade Federal" nullable="0" physicalName="CD_UND_FDRL" precision="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Código da Unidade Federal (SP,DF,etc)</remarks>
+    </column>
+    <column id="COL60" populated="true" UUID="898dd020-4c09-4cc7-94b9-36151c578cc7" autoIncrement="false" autoIncrementSequenceName="UND_FDRL_TX_NM_UND_FDRL_seq" defaultValue="" name="Texto Nome Unidade Federal" nullable="0" physicalName="TX_NM_UND_FDRL" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome da unidade federal</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB573" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB572" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB574" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX61" populated="true" UUID="084f42ee-4375-4b86-b751-38dd50ebf83c" clustered="false" name="NR_UND_FDRL" physicalName="nr_und_fdrl" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC62" populated="true" UUID="59ce5564-0d10-49fe-8199-1ad03971e48c" ascendingOrDescending="UNSPECIFIED" column-ref="COL58" name="Número Unidade Federal" physicalName="NR_UND_FDRL" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB63" populated="true" UUID="f9ca287e-028e-462e-a6e3-9da200a7d054" name="CIDADE" objectType="TABLE" physicalName="CID" >
+   <remarks>Tabela com o cadastro das cidades</remarks>
+   <folder id="FOLTAB631" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL64" populated="true" UUID="c7e7dea9-ec84-47ca-a4c7-8bf3352bbdd3" autoIncrement="true" autoIncrementSequenceName="SEQ_CID" defaultValue="" name="Número Cidade" nullable="0" physicalName="NR_CID" precision="4" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks>PK tabela Cidade</remarks>
+    </column>
+    <column id="COL65" populated="true" UUID="419ef2a5-aa03-426a-bd25-bd1dcf261cf1" autoIncrement="false" autoIncrementSequenceName="CID_TX_NM_CID_seq" defaultValue="" name="Texto Nome Cidade" nullable="0" physicalName="TX_NM_CID" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome da Cidade</remarks>
+    </column>
+    <column id="COL66" populated="true" UUID="6c2b1490-f162-4007-9124-f5d244eb656b" autoIncrement="false" autoIncrementSequenceName="seq_est" defaultValue="" name="Número Unidade Federal" nullable="0" physicalName="NR_UND_FDRL" precision="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks>PK tabela Unidade Federal</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB633" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB632" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB634" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX67" populated="true" UUID="2771ced3-2730-4f08-90f0-fe8e1baff9b6" clustered="false" name="NR_CID" physicalName="nr_cid" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC68" populated="true" UUID="4da0a9f7-0eed-4b1a-abe6-acad2da9ad93" ascendingOrDescending="UNSPECIFIED" column-ref="COL64" name="Número Cidade" physicalName="NR_CID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB69" populated="true" UUID="732b92c5-bffa-422d-a650-22a264bd2a5f" name="PARÂMETRO SISTEMA" objectType="TABLE" physicalName="PARMETRO_SISTEMA" >
+   <remarks>Tabela com o cadastro dos parâmetros do sistema</remarks>
+   <folder id="FOLTAB691" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL70" populated="true" UUID="d0c1c5de-b272-465f-b705-b512307ba471" autoIncrement="true" autoIncrementSequenceName="SEQ_PRM_SIS" defaultValue="" name="Número Parâmetro Sistema" nullable="0" physicalName="NR_PRM_SIS" precision="2" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+     <remarks>PK tabela Parâmetro Sistema</remarks>
+    </column>
+    <column id="COL71" populated="true" UUID="3d5a7c08-235a-47d5-8761-ae59f236fa5e" autoIncrement="false" autoIncrementSequenceName="PARMETRO_SISTEMA_IN_AMB_seq" defaultValue="" name="Indicador Ambiente" nullable="0" physicalName="IN_AMB" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks>W=Web
+M=Mobile</remarks>
+    </column>
+    <column id="COL72" populated="true" UUID="b5be4040-c78e-43b3-8d15-880866e0af20" autoIncrement="false" autoIncrementSequenceName="PARMETRO_SISTEMA_NR_MNTO_SSS_USU_seq" defaultValue="" name="Número Minutos Sessão Usuário" nullable="0" physicalName="NR_MNTO_SSS_USU" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+     <remarks>Número de minutos de sessão do usuário</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB693" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB692" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB694" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX73" populated="true" UUID="8d33241f-4f1e-48b1-af10-931aa7c7f5d5" clustered="false" name="NR_PRM_SIS" physicalName="nr_prm_sis" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC74" populated="true" UUID="d9833e8f-f8b4-47f3-83b1-e097aa0a34ed" ascendingOrDescending="UNSPECIFIED" column-ref="COL70" name="Número Parâmetro Sistema" physicalName="NR_PRM_SIS" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB75" populated="true" UUID="5e11dbd2-679a-4dc8-8c2b-533a0d98e011" name="TIPO UNIDADE" objectType="TABLE" physicalName="TIP_UND" >
+   <remarks>Tipos de Unidade do Sistema</remarks>
+   <folder id="FOLTAB751" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL76" populated="true" UUID="904c9952-0c11-4b8e-8e85-666dac6b8054" autoIncrement="true" autoIncrementSequenceName="TIP_UND_NR_TIP_UND_seq" defaultValue="" name="Número Tipo Unidade" nullable="0" physicalName="NR_TIP_UND" precision="3" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+     <remarks>PK tabela Tipo Unidade</remarks>
+    </column>
+    <column id="COL77" populated="true" UUID="22259f9c-9b40-4f9f-af39-ac1f2d4cef06" autoIncrement="false" autoIncrementSequenceName="TIP_UND_NM_TIP_UND_seq" defaultValue="" name="Nome Tipo Unidade" nullable="0" physicalName="NM_TIP_UND" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do Tipo Unidade</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB753" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB752" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB754" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX78" populated="true" UUID="2e3c5d71-46ef-4254-b9f5-01e835cfe1c6" clustered="false" name="NR_TIP_UND" physicalName="nr_tip_und" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC79" populated="true" UUID="81f7d375-b12c-47a3-8f1a-fe375a0a50d8" ascendingOrDescending="UNSPECIFIED" column-ref="COL76" name="Número Tipo Unidade" physicalName="NR_TIP_UND" />
     </index>
    </folder>
   </table>
   <relationships>
-   <relationship id="REL48" populated="true" UUID="66c6ba0a-e4f9-4a4d-9a64-43c51242c6d6" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="6" identifying="false" name="PRFL_PRFL_UND_USU_FK" physicalName="prfl_prfl_und_usu_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP49" populated="true" UUID="7302ec31-c119-42b7-bb72-6eb9640e41d2" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
+   <relationship id="REL80" populated="true" UUID="66c6ba0a-e4f9-4a4d-9a64-43c51242c6d6" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="6" identifying="false" name="PRFL_PRFL_UND_USU_FK" physicalName="prfl_prfl_und_usu_fk" pk-table-ref="TAB9" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP81" populated="true" UUID="7302ec31-c119-42b7-bb72-6eb9640e41d2" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL10" />
    </relationship>
-   <relationship id="REL50" populated="true" UUID="02cdd02d-d077-47e8-ba8c-3462f5853fa3" deferrability="7" deleteRule="3" fk-table-ref="TAB19" fkCardinality="7" identifying="false" name="PRFL_PRFL_MENU_FK" physicalName="prfl_prfl_menu_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP51" populated="true" UUID="b46f8ecb-3346-41ae-9ade-b5c9526f9b11" fk-column-ref="COL22" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
+   <relationship id="REL82" populated="true" UUID="02cdd02d-d077-47e8-ba8c-3462f5853fa3" deferrability="7" deleteRule="3" fk-table-ref="TAB20" fkCardinality="7" identifying="false" name="PRFL_PRFL_MENU_FK" physicalName="prfl_prfl_menu_fk" pk-table-ref="TAB9" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP83" populated="true" UUID="b46f8ecb-3346-41ae-9ade-b5c9526f9b11" fk-column-ref="COL23" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL10" />
    </relationship>
-   <relationship id="REL52" populated="true" UUID="2e3058f1-6c2f-44b5-b30b-a81e41c85bdf" deferrability="7" deleteRule="3" fk-table-ref="TAB19" fkCardinality="7" identifying="false" name="MENU_PRFL_MENU_FK" physicalName="menu_prfl_menu_fk" pk-table-ref="TAB13" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP53" populated="true" UUID="5247933d-b304-42a2-ba7f-1b57709fd13f" fk-column-ref="COL21" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL14" />
+   <relationship id="REL84" populated="true" UUID="2e3058f1-6c2f-44b5-b30b-a81e41c85bdf" deferrability="7" deleteRule="3" fk-table-ref="TAB20" fkCardinality="7" identifying="false" name="MENU_PRFL_MENU_FK" physicalName="menu_prfl_menu_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP85" populated="true" UUID="5247933d-b304-42a2-ba7f-1b57709fd13f" fk-column-ref="COL22" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
    </relationship>
-   <relationship id="REL54" populated="true" UUID="85ed15c0-3e47-473e-910c-bde6eb45734a" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="USU_SIS_PRFL_UND_USU_FK" physicalName="usu_sis_prfl_und_usu_fk" pk-table-ref="TAB25" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP55" populated="true" UUID="d5eb33fa-decb-41b4-960b-79fa2f2f5ea8" fk-column-ref="COL4" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL26" />
+   <relationship id="REL86" populated="true" UUID="85ed15c0-3e47-473e-910c-bde6eb45734a" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="USU_SIS_PRFL_UND_USU_FK" physicalName="usu_sis_prfl_und_usu_fk" pk-table-ref="TAB26" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP87" populated="true" UUID="d5eb33fa-decb-41b4-960b-79fa2f2f5ea8" fk-column-ref="COL5" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
    </relationship>
-   <relationship id="REL56" populated="true" UUID="4cf0e97b-eaaa-40df-97f3-8b295687e6e6" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="UND_PRFL_UND_USU_SIS_fk" physicalName="und_prfl_und_usu_sis_fk" pk-table-ref="TAB33" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP57" populated="true" UUID="86f8c3a8-7836-4cd2-9903-4bbef99f2012" fk-column-ref="COL5" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL34" />
+   <relationship id="REL88" populated="true" UUID="f13a28a2-77ce-432b-b871-548f82f59f42" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="UND_PRFL_UND_USU_SIS_fk" physicalName="und_prfl_und_usu_sis_fk" pk-table-ref="TAB35" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP89" populated="true" UUID="00365df1-073f-4d8e-8028-3d9e7fc6a98c" fk-column-ref="COL4" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL36" />
    </relationship>
-   <relationship id="REL58" populated="true" UUID="5b4ad576-8531-4cbc-bd9a-03638ab15508" deferrability="7" deleteRule="3" fk-table-ref="TAB25" fkCardinality="7" identifying="false" name="PSS_USU_SIS_FK" physicalName="pss_usu_sis_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP59" populated="true" UUID="78ce3ec1-7e7b-493b-8757-3874c295b375" fk-column-ref="COL30" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
+   <relationship id="REL90" populated="true" UUID="5b4ad576-8531-4cbc-bd9a-03638ab15508" deferrability="7" deleteRule="3" fk-table-ref="TAB26" fkCardinality="7" identifying="false" name="PSS_USU_SIS_FK" physicalName="pss_usu_sis_fk" pk-table-ref="TAB48" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP91" populated="true" UUID="78ce3ec1-7e7b-493b-8757-3874c295b375" fk-column-ref="COL31" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL49" />
+   </relationship>
+   <relationship id="REL92" populated="true" UUID="31fb340b-0c86-4e96-8e28-1b202f89f2cc" deferrability="7" deleteRule="3" fk-table-ref="TAB63" fkCardinality="6" identifying="false" name="UND_FDRL_CID_FK" physicalName="und_fdrl_cid_fk" pk-table-ref="TAB57" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP93" populated="true" UUID="ff73ffeb-77a0-4f2a-a475-f40b4bdb7fdb" fk-column-ref="COL66" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL58" />
+   </relationship>
+   <relationship id="REL94" populated="true" UUID="c20f2d42-c95a-42a9-8726-b41b0c1902b8" deferrability="7" deleteRule="3" fk-table-ref="TAB35" fkCardinality="7" identifying="false" name="CID_UND_FK" physicalName="cid_und_fk" pk-table-ref="TAB63" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP95" populated="true" UUID="206331e1-86b5-4fb5-a7ff-ac11d281d796" fk-column-ref="COL37" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL64" />
+   </relationship>
+   <relationship id="REL96" populated="true" UUID="232f0826-3ecd-4b8b-896c-3027061b5924" deferrability="7" deleteRule="3" fk-table-ref="TAB35" fkCardinality="6" identifying="false" name="TIP_UND_UND_FK" physicalName="tip_und_und_fk" pk-table-ref="TAB75" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP97" populated="true" UUID="f909f14f-9134-4ddf-bc05-f0b537a781c9" fk-column-ref="COL45" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL76" />
    </relationship>
   </relationships>
  </target-database>
  <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.1892071150027206" viewportX="897" viewportY="69" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
-  <table-pane table-ref="TAB1" x="643" y="399" bgColor="0xe8cfdb" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB8" x="314" y="174" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB13" x="272" y="618" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB19" x="241" y="385" bgColor="0xc7d0df" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB25" x="1109" y="345" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB33" x="936" y="137" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB39" x="1410" y="102" bgColor="0xdfedce" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-link relationship-ref="REL54" pkConnection="0.7294117647058823" fkConnection="0.2235294117647059" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL48" pkConnection="0.8149779735682819" fkConnection="0.11743772241992882" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL52" pkConnection="0.4793388429752066" fkConnection="0.5097276264591439" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL58" pkConnection="0.43462897526501765" fkConnection="0.5373665480427047" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL50" pkConnection="0.4666666666666667" fkConnection="0.5330739299610895" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL56" pkConnection="0.36666666666666664" fkConnection="0.6074498567335244" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
+ <play-pen zoom="1.1892071150027206" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="606" y="512" bgColor="0xe8cfdb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB9" x="300" y="165" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB14" x="201" y="618" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB20" x="187" y="411" bgColor="0xc7d0df" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB26" x="1157" y="517" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB35" x="708" y="248" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB48" x="1600" y="323" bgColor="0xdfedce" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB57" x="658" y="20" bgColor="0xeec994" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB63" x="1179" y="36" bgColor="0xeec994" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB69" x="110" y="29" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB75" x="1131" y="266" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL86" pkConnection="0.7294117647058823" fkConnection="0.2235294117647059" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL80" pkConnection="0.8149779735682819" fkConnection="0.11743772241992882" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL84" pkConnection="0.4793388429752066" fkConnection="0.5097276264591439" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL90" pkConnection="0.9026548672566371" fkConnection="0.08849557522123894" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL82" pkConnection="0.4666666666666667" fkConnection="0.5330739299610895" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL92" pkConnection="0.5352112676056338" fkConnection="0.4225352112676056" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL94" pkConnection="0.2918149466192171" fkConnection="0.7833333333333333" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL88" pkConnection="0.41471571906354515" fkConnection="0.5444126074498568" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL96" pkConnection="0.07954545454545454" fkConnection="1.0" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="20"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">

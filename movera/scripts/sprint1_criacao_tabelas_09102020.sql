@@ -19,6 +19,7 @@ CREATE TABLE public.PARMETRO_SISTEMA (
                 NR_PRM_SIS NUMERIC(2) NOT NULL DEFAULT nextval('public.seq_prm_sis'),
                 IN_AMB CHAR(1) NOT NULL,
                 NR_MNTO_SSS_USU NUMERIC(3) NOT NULL,
+                FSHR_BSB NUMERIC(3) NOT NULL,
                 CONSTRAINT nr_prm_sis PRIMARY KEY (NR_PRM_SIS)
 );
 COMMENT ON TABLE public.PARMETRO_SISTEMA IS 'Tabela com o cadastro dos parâmetros do sistema';
@@ -26,6 +27,7 @@ COMMENT ON COLUMN public.PARMETRO_SISTEMA.NR_PRM_SIS IS 'PK tabela Parâmetro Sis
 COMMENT ON COLUMN public.PARMETRO_SISTEMA.IN_AMB IS 'W=Web
 M=Mobile';
 COMMENT ON COLUMN public.PARMETRO_SISTEMA.NR_MNTO_SSS_USU IS 'Número de minutos de sessão do usuário';
+COMMENT ON COLUMN public.PARMETRO_SISTEMA.FSHR_BSB IS 'Fuso Horário Brasília';
 
 
 ALTER SEQUENCE public.seq_prm_sis OWNED BY public.PARMETRO_SISTEMA.NR_PRM_SIS;
@@ -97,6 +99,7 @@ CREATE TABLE public.UND (
                 DT_HH_CAD_UND TIMESTAMP NOT NULL,
                 TX_JST_UND_IATV VARCHAR(30),
                 NR_TIP_UND NUMERIC(3) NOT NULL,
+                HR_UND TIMESTAMP NOT NULL,
                 CONSTRAINT nr_und PRIMARY KEY (NR_UND)
 );
 COMMENT ON TABLE public.UND IS 'Tabela com o cadastro das Unidades';
@@ -111,6 +114,7 @@ COMMENT ON COLUMN public.UND.IN_UND_ATV IS '1 = Sim
 COMMENT ON COLUMN public.UND.DT_HH_CAD_UND IS 'Data Hora Cadastro Unidade';
 COMMENT ON COLUMN public.UND.TX_JST_UND_IATV IS 'Texto com a justificativa da inatividade da unidade';
 COMMENT ON COLUMN public.UND.NR_TIP_UND IS 'PK tabela Tipo Unidade';
+COMMENT ON COLUMN public.UND.HR_UND IS 'Horário Unidade';
 
 
 ALTER SEQUENCE public.seq_und_1 OWNED BY public.UND.NR_UND;
@@ -136,6 +140,48 @@ COMMENT ON COLUMN public.USU_SIS.DT_HH_CAD_USU_SIS IS 'Data Hora Cadastro Usuári
 
 
 ALTER SEQUENCE public.seq_usu_sis OWNED BY public.USU_SIS.NR_USU_SIS;
+
+CREATE SEQUENCE public.seq_hr_usu_sis;
+
+CREATE TABLE public.HR_USU_SIS (
+                NR_HR_USU_SIS NUMERIC(6) NOT NULL DEFAULT nextval('public.seq_hr_usu_sis'),
+                NR_USU_SIS NUMERIC(6) NOT NULL,
+                HR_INC_SGDO TIMESTAMP,
+                HR_FIM_SGDO TIMESTAMP,
+                HR_INC_TER TIMESTAMP,
+                HR_FIM_TER TIMESTAMP,
+                HR_INC_QRTO TIMESTAMP,
+                HR_FIM_QRTO TIMESTAMP,
+                HR_INC_QNTO TIMESTAMP,
+                HR_FIM_QNTO TIMESTAMP,
+                HR_INC_SXTO TIMESTAMP,
+                HR_FIM_SXTO TIMESTAMP,
+                HR_INC_SBD TIMESTAMP,
+                HR_FIM_SBD TIMESTAMP,
+                HR_INC_DMG TIMESTAMP,
+                HR_FIM_DMG TIMESTAMP,
+                CONSTRAINT nr_hr_usu_sis PRIMARY KEY (NR_HR_USU_SIS)
+);
+COMMENT ON TABLE public.HR_USU_SIS IS 'Tabela com o cadastro dos horários e dias para fazer login dos usuários do sistema';
+COMMENT ON COLUMN public.HR_USU_SIS.NR_HR_USU_SIS IS 'PK tabela número usuário sistema';
+COMMENT ON COLUMN public.HR_USU_SIS.NR_USU_SIS IS 'Pk tabela Usuário Sistema';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_SGDO IS 'Horário Início Usuário Sistema Segunda';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_SGDO IS 'Horário Fim Usuário Sistema Segunda';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_TER IS 'Horário Início Terça';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_TER IS 'Horário Fim Terça';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_QRTO IS 'Horário Início Quarta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_QRTO IS 'Horário Fim Quarta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_QNTO IS 'Horário Início Quinta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_QNTO IS 'Horário Fim Quinta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_SXTO IS 'Horário Início Sexta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_SXTO IS 'Horário Fim Sexta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_SBD IS 'Horário Início Sábado';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_SBD IS 'Horário Fim Sábado';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_DMG IS 'Horário Início Domingo';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_DMG IS 'Horário Fim Domingo';
+
+
+ALTER SEQUENCE public.seq_hr_usu_sis OWNED BY public.HR_USU_SIS.NR_HR_USU_SIS;
 
 CREATE SEQUENCE public.seq_menu;
 
@@ -192,6 +238,8 @@ CREATE TABLE public.PRFL_UND_USU_SIS (
                 NR_UND NUMERIC(4),
                 NR_USU_SIS NUMERIC(6) NOT NULL,
                 DT_HH_CAD_PRFL_UND_SIS TIMESTAMP NOT NULL,
+                IN_PRFL_UND_USU_SIS_ATI CHAR(1) NOT NULL,
+                TX_JST_PRFL_UND_USU_IATV VARCHAR(30),
                 CONSTRAINT nr_prfl_und_usu_sis PRIMARY KEY (NR_PRFL_UND_USU_SIS)
 );
 COMMENT ON TABLE public.PRFL_UND_USU_SIS IS 'Tabela de vinculo entre usuário sistema, perfil e unidade';
@@ -200,6 +248,10 @@ COMMENT ON COLUMN public.PRFL_UND_USU_SIS.NR_PRFL IS 'FK tabela Perfil';
 COMMENT ON COLUMN public.PRFL_UND_USU_SIS.NR_UND IS 'FK Tabela Unidade';
 COMMENT ON COLUMN public.PRFL_UND_USU_SIS.NR_USU_SIS IS 'FK tabela Usuario Sistema';
 COMMENT ON COLUMN public.PRFL_UND_USU_SIS.DT_HH_CAD_PRFL_UND_SIS IS 'Data hora Cadastro Perfil Usuário Sistema';
+COMMENT ON COLUMN public.PRFL_UND_USU_SIS.IN_PRFL_UND_USU_SIS_ATI IS 'Indicador Perfil Unidade Usuário Sistema Ativo 
+Ativo = 1
+Inativo = 0';
+COMMENT ON COLUMN public.PRFL_UND_USU_SIS.TX_JST_PRFL_UND_USU_IATV IS 'Texto Justificativa Perfil Unidade Usuário Inativo';
 
 
 ALTER SEQUENCE public.seq_prfl_und_usu OWNED BY public.PRFL_UND_USU_SIS.NR_PRFL_UND_USU_SIS;
@@ -240,6 +292,13 @@ ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
 ALTER TABLE public.PRFL_UND_USU_SIS ADD CONSTRAINT usu_sis_prfl_und_usu_fk
+FOREIGN KEY (NR_USU_SIS)
+REFERENCES public.USU_SIS (NR_USU_SIS)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE public.HR_USU_SIS ADD CONSTRAINT usu_sis_hr_usu_sis_fk
 FOREIGN KEY (NR_USU_SIS)
 REFERENCES public.USU_SIS (NR_USU_SIS)
 ON DELETE NO ACTION

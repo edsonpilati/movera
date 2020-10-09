@@ -95,7 +95,7 @@ CREATE TABLE public.UND (
                 TX_NM_UND VARCHAR(50) NOT NULL,
                 IN_UND_ATV CHAR(1) NOT NULL,
                 DT_HH_CAD_UND TIMESTAMP NOT NULL,
-                TX_JST_UND_IATV VARCHAR(30) NOT NULL,
+                TX_JST_UND_IATV VARCHAR(30),
                 NR_TIP_UND NUMERIC(3) NOT NULL,
                 CONSTRAINT nr_und PRIMARY KEY (NR_UND)
 );

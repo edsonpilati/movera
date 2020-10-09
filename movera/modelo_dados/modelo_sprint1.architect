@@ -166,7 +166,7 @@ M=Mobile</remarks>
     <column id="COL43" populated="true" UUID="5f48f790-0ff4-457e-aa6c-b25c7eefab4b" autoIncrement="false" autoIncrementSequenceName="UND_DT_HH_CAD_UND_seq" defaultValue="" name="Data Hora Cadastro Unidade" nullable="0" physicalName="DT_HH_CAD_UND" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Data Hora Cadastro Unidade</remarks>
     </column>
-    <column id="COL44" populated="true" UUID="e360b179-f09f-4d38-baee-3195a3aee382" autoIncrement="false" autoIncrementSequenceName="UND_TX_JST_UND_IATV_seq" defaultValue="" name="Texto Justificativa Unidade Inativa" nullable="0" physicalName="TX_JST_UND_IATV" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL44" populated="true" UUID="e360b179-f09f-4d38-baee-3195a3aee382" autoIncrement="false" autoIncrementSequenceName="UND_TX_JST_UND_IATV_seq" defaultValue="" name="Texto Justificativa Unidade Inativa" nullable="1" physicalName="TX_JST_UND_IATV" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Texto com a justificativa da inatividade da unidade</remarks>
     </column>
     <column id="COL45" populated="true" UUID="d2029cc3-8d6c-4b6f-83d9-a79cb3207896" autoIncrement="false" autoIncrementSequenceName="SEQ_NR_TIP_UND" defaultValue="" name="Número Tipo Unidade" nullable="0" physicalName="NR_TIP_UND" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
@@ -358,7 +358,7 @@ M=Mobile</remarks>
   <table-link relationship-ref="REL92" pkConnection="0.5352112676056338" fkConnection="0.4225352112676056" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL94" pkConnection="0.2918149466192171" fkConnection="0.7833333333333333" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
   <table-link relationship-ref="REL88" pkConnection="0.41471571906354515" fkConnection="0.5444126074498568" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL96" pkConnection="0.07954545454545454" fkConnection="1.0" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="20"/>
+  <table-link relationship-ref="REL96" pkConnection="0.0946969696969697" fkConnection="1.0" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="20"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">

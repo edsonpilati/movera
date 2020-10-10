@@ -281,20 +281,20 @@ M=Mobile</remarks>
     </index>
    </folder>
   </table>
-  <table id="TAB75" populated="true" UUID="732b92c5-bffa-422d-a650-22a264bd2a5f" name="PARÂMETRO SISTEMA" objectType="TABLE" physicalName="PARMETRO_SISTEMA" >
+  <table id="TAB75" populated="true" UUID="732b92c5-bffa-422d-a650-22a264bd2a5f" name="PARÂMETRO SISTEMA" objectType="TABLE" physicalName="PRM_SIS" >
    <remarks>Tabela com o cadastro dos parâmetros do sistema</remarks>
    <folder id="FOLTAB751" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL76" populated="true" UUID="d0c1c5de-b272-465f-b705-b512307ba471" autoIncrement="true" autoIncrementSequenceName="SEQ_PRM_SIS" defaultValue="" name="Número Parâmetro Sistema" nullable="0" physicalName="NR_PRM_SIS" precision="2" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>PK tabela Parâmetro Sistema</remarks>
     </column>
-    <column id="COL77" populated="true" UUID="3d5a7c08-235a-47d5-8761-ae59f236fa5e" autoIncrement="false" autoIncrementSequenceName="PARMETRO_SISTEMA_IN_AMB_seq" defaultValue="" name="Indicador Ambiente" nullable="0" physicalName="IN_AMB" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+    <column id="COL77" populated="true" UUID="3d5a7c08-235a-47d5-8761-ae59f236fa5e" autoIncrement="false" autoIncrementSequenceName="PRM_SIS_IN_AMB_seq" defaultValue="" name="Indicador Ambiente" nullable="0" physicalName="IN_AMB" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
      <remarks>W=Web
 M=Mobile</remarks>
     </column>
-    <column id="COL78" populated="true" UUID="b5be4040-c78e-43b3-8d15-880866e0af20" autoIncrement="false" autoIncrementSequenceName="PARMETRO_SISTEMA_NR_MNTO_SSS_USU_seq" defaultValue="" name="Número Minutos Sessão Usuário" nullable="0" physicalName="NR_MNTO_SSS_USU" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+    <column id="COL78" populated="true" UUID="b5be4040-c78e-43b3-8d15-880866e0af20" autoIncrement="false" autoIncrementSequenceName="PRM_SIS_NR_MNTO_SSS_USU_seq" defaultValue="" name="Número Minutos Sessão Usuário" nullable="0" physicalName="NR_MNTO_SSS_USU" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>Número de minutos de sessão do usuário</remarks>
     </column>
-    <column id="COL79" populated="true" UUID="22dac4aa-ac6c-4e95-afa6-3a0d5a867877" autoIncrement="false" autoIncrementSequenceName="PARMETRO_SISTEMA_FSHR_BSB_seq" defaultValue="" name="Fuso Horário Brasília" nullable="0" physicalName="FSHR_BSB" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+    <column id="COL79" populated="true" UUID="22dac4aa-ac6c-4e95-afa6-3a0d5a867877" autoIncrement="false" autoIncrementSequenceName="PRM_SIS_FSHR_BSB_seq" defaultValue="" name="Fuso Horário Brasília" nullable="0" physicalName="FSHR_BSB" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>Fuso Horário Brasília</remarks>
     </column>
     </folder>

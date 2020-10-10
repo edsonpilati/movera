@@ -57,22 +57,22 @@ ALTER SEQUENCE public.tip_und_nr_tip_und_seq OWNED BY public.TIP_UND.NR_TIP_UND;
 
 CREATE SEQUENCE public.seq_prm_sis;
 
-CREATE TABLE public.PARMETRO_SISTEMA (
+CREATE TABLE public.PRM_SIS (
                 NR_PRM_SIS NUMERIC(2) NOT NULL DEFAULT nextval('public.seq_prm_sis'),
                 IN_AMB CHAR(1) NOT NULL,
                 NR_MNTO_SSS_USU NUMERIC(3) NOT NULL,
                 FSHR_BSB NUMERIC(3) NOT NULL,
                 CONSTRAINT nr_prm_sis PRIMARY KEY (NR_PRM_SIS)
 );
-COMMENT ON TABLE public.PARMETRO_SISTEMA IS 'Tabela com o cadastro dos parâmetros do sistema';
-COMMENT ON COLUMN public.PARMETRO_SISTEMA.NR_PRM_SIS IS 'PK tabela Parâmetro Sistema';
-COMMENT ON COLUMN public.PARMETRO_SISTEMA.IN_AMB IS 'W=Web
+COMMENT ON TABLE public.PRM_SIS IS 'Tabela com o cadastro dos parâmetros do sistema';
+COMMENT ON COLUMN public.PRM_SIS.NR_PRM_SIS IS 'PK tabela Parâmetro Sistema';
+COMMENT ON COLUMN public.PRM_SIS.IN_AMB IS 'W=Web
 M=Mobile';
-COMMENT ON COLUMN public.PARMETRO_SISTEMA.NR_MNTO_SSS_USU IS 'Número de minutos de sessão do usuário';
-COMMENT ON COLUMN public.PARMETRO_SISTEMA.FSHR_BSB IS 'Fuso Horário Brasília';
+COMMENT ON COLUMN public.PRM_SIS.NR_MNTO_SSS_USU IS 'Número de minutos de sessão do usuário';
+COMMENT ON COLUMN public.PRM_SIS.FSHR_BSB IS 'Fuso Horário Brasília';
 
 
-ALTER SEQUENCE public.seq_prm_sis OWNED BY public.PARMETRO_SISTEMA.NR_PRM_SIS;
+ALTER SEQUENCE public.seq_prm_sis OWNED BY public.PRM_SIS.NR_PRM_SIS;
 
 CREATE SEQUENCE public.seq_und_fdrl;
 

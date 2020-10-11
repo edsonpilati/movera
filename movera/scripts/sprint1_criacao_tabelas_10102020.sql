@@ -20,23 +20,23 @@ CREATE TABLE public.HR_USU_SIS (
                 HR_FIM_DMG TIMESTAMP,
                 CONSTRAINT nr_hr_usu_sis PRIMARY KEY (NR_HR_USU_SIS)
 );
-COMMENT ON TABLE public.HR_USU_SIS IS 'Tabela com o cadastro dos hor·rios e dias para fazer login dos usu·rios do sistema';
-COMMENT ON COLUMN public.HR_USU_SIS.NR_HR_USU_SIS IS 'PK tabela Hor·rio Usu·rio Sistema';
-COMMENT ON COLUMN public.HR_USU_SIS.NM_HR_USU_SIS IS 'Nome Hor·rio Usu·rio Sistema';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_SGDO IS 'Hor·rio InÌcio Usu·rio Sistema Segunda';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_SGDO IS 'Hor·rio Fim Usu·rio Sistema Segunda';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_TER IS 'Hor·rio InÌcio TerÁa';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_TER IS 'Hor·rio Fim TerÁa';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_QRTO IS 'Hor·rio InÌcio Quarta';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_QRTO IS 'Hor·rio Fim Quarta';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_QNTO IS 'Hor·rio InÌcio Quinta';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_QNTO IS 'Hor·rio Fim Quinta';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_SXTO IS 'Hor·rio InÌcio Sexta';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_SXTO IS 'Hor·rio Fim Sexta';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_SBD IS 'Hor·rio InÌcio S·bado';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_SBD IS 'Hor·rio Fim S·bado';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_DMG IS 'Hor·rio InÌcio Domingo';
-COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_DMG IS 'Hor·rio Fim Domingo';
+COMMENT ON TABLE public.HR_USU_SIS IS 'Tabela com o cadastro dos hor√°rios e dias para fazer login dos usu√°rios do sistema';
+COMMENT ON COLUMN public.HR_USU_SIS.NR_HR_USU_SIS IS 'PK tabela Hor√°rio Usu√°rio Sistema';
+COMMENT ON COLUMN public.HR_USU_SIS.NM_HR_USU_SIS IS 'Nome Hor√°rio Usu√°rio Sistema';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_SGDO IS 'Hor√°rio In√≠cio Usu√°rio Sistema Segunda';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_SGDO IS 'Hor√°rio Fim Usu√°rio Sistema Segunda';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_TER IS 'Hor√°rio In√≠cio Ter√ßa';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_TER IS 'Hor√°rio Fim Ter√ßa';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_QRTO IS 'Hor√°rio In√≠cio Quarta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_QRTO IS 'Hor√°rio Fim Quarta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_QNTO IS 'Hor√°rio In√≠cio Quinta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_QNTO IS 'Hor√°rio Fim Quinta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_SXTO IS 'Hor√°rio In√≠cio Sexta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_SXTO IS 'Hor√°rio Fim Sexta';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_SBD IS 'Hor√°rio In√≠cio S√°bado';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_SBD IS 'Hor√°rio Fim S√°bado';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_INC_DMG IS 'Hor√°rio In√≠cio Domingo';
+COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_DMG IS 'Hor√°rio Fim Domingo';
 
 
 ALTER SEQUENCE public.seq_hr_usu_sis OWNED BY public.HR_USU_SIS.NR_HR_USU_SIS;
@@ -64,12 +64,12 @@ CREATE TABLE public.PRM_SIS (
                 FSHR_BSB NUMERIC(3) NOT NULL,
                 CONSTRAINT nr_prm_sis PRIMARY KEY (NR_PRM_SIS)
 );
-COMMENT ON TABLE public.PRM_SIS IS 'Tabela com o cadastro dos par‚metros do sistema';
-COMMENT ON COLUMN public.PRM_SIS.NR_PRM_SIS IS 'PK tabela Par‚metro Sistema';
+COMMENT ON TABLE public.PRM_SIS IS 'Tabela com o cadastro dos par√¢metros do sistema';
+COMMENT ON COLUMN public.PRM_SIS.NR_PRM_SIS IS 'PK tabela Par√¢metro Sistema';
 COMMENT ON COLUMN public.PRM_SIS.IN_AMB IS 'W=Web
 M=Mobile';
-COMMENT ON COLUMN public.PRM_SIS.NR_MNTO_SSS_USU IS 'N˙mero de minutos de sess„o do usu·rio';
-COMMENT ON COLUMN public.PRM_SIS.FSHR_BSB IS 'Fuso Hor·rio BrasÌlia';
+COMMENT ON COLUMN public.PRM_SIS.NR_MNTO_SSS_USU IS 'N√∫mero de minutos de sess√£o do usu√°rio';
+COMMENT ON COLUMN public.PRM_SIS.FSHR_BSB IS 'Fuso Hor√°rio Bras√≠lia';
 
 
 ALTER SEQUENCE public.seq_prm_sis OWNED BY public.PRM_SIS.NR_PRM_SIS;
@@ -79,13 +79,15 @@ CREATE SEQUENCE public.seq_und_fdrl;
 CREATE TABLE public.UND_FDRL (
                 NR_UND_FDRL NUMERIC(2) NOT NULL DEFAULT nextval('public.seq_und_fdrl'),
                 CD_UND_FDRL VARCHAR(2) NOT NULL,
-                TX_NM_UND_FDRL VARCHAR(30) NOT NULL,
+                NM_UND_FDRL VARCHAR(30) NOT NULL,
+                SG_UND_FDRL VARCHAR(2) NOT NULL,
                 CONSTRAINT nr_und_fdrl PRIMARY KEY (NR_UND_FDRL)
 );
 COMMENT ON TABLE public.UND_FDRL IS 'Tabela com o cadastro dos estados';
 COMMENT ON COLUMN public.UND_FDRL.NR_UND_FDRL IS 'PK tabela Unidade Federal';
-COMMENT ON COLUMN public.UND_FDRL.CD_UND_FDRL IS 'CÛdigo da Unidade Federal (SP,DF,etc)';
-COMMENT ON COLUMN public.UND_FDRL.TX_NM_UND_FDRL IS 'Nome da unidade federal';
+COMMENT ON COLUMN public.UND_FDRL.CD_UND_FDRL IS 'C√≥digo da Unidade Federal (SP,DF,etc)';
+COMMENT ON COLUMN public.UND_FDRL.NM_UND_FDRL IS 'Nome da unidade federal';
+COMMENT ON COLUMN public.UND_FDRL.SG_UND_FDRL IS 'Sigla Unidade Federal(DF,SP,RJ)';
 
 
 ALTER SEQUENCE public.seq_und_fdrl OWNED BY public.UND_FDRL.NR_UND_FDRL;
@@ -100,11 +102,11 @@ CREATE TABLE public.MUN (
                 NR_UND_FDRL NUMERIC(2) NOT NULL,
                 CONSTRAINT nr_mun PRIMARY KEY (NR_CID)
 );
-COMMENT ON TABLE public.MUN IS 'Tabela com o cadastro dos municÌpios';
+COMMENT ON TABLE public.MUN IS 'Tabela com o cadastro dos munic√≠pios';
 COMMENT ON COLUMN public.MUN.NR_CID IS 'PK tabela Cidade';
-COMMENT ON COLUMN public.MUN.CD_MUN IS 'CÛdigo MunicÌpio';
-COMMENT ON COLUMN public.MUN.CD_MUN_CMT IS 'CÛdigo MunicÌpio Completo';
-COMMENT ON COLUMN public.MUN.NM_MUN IS 'Nome do MunicÌpio';
+COMMENT ON COLUMN public.MUN.CD_MUN IS 'C√≥digo Munic√≠pio';
+COMMENT ON COLUMN public.MUN.CD_MUN_CMT IS 'C√≥digo Munic√≠pio Completo';
+COMMENT ON COLUMN public.MUN.NM_MUN IS 'Nome do Munic√≠pio';
 COMMENT ON COLUMN public.MUN.NR_UND_FDRL IS 'PK tabela Unidade Federal';
 
 
@@ -114,7 +116,7 @@ CREATE SEQUENCE public.seq_pss;
 
 CREATE TABLE public.PSS (
                 NR_PSS NUMERIC(8) NOT NULL DEFAULT nextval('public.seq_pss'),
-                TX_NM_PSS VARCHAR(60) NOT NULL,
+                NM_PSS VARCHAR(60) NOT NULL,
                 TX_CPF_PSS VARCHAR(11) NOT NULL,
                 TX_TCEL_PSS VARCHAR(11) NOT NULL,
                 TX_EMAI_PSS VARCHAR(30),
@@ -123,7 +125,7 @@ CREATE TABLE public.PSS (
 );
 COMMENT ON TABLE public.PSS IS 'Tabela com o cadastro das pessoas';
 COMMENT ON COLUMN public.PSS.NR_PSS IS 'PK tabela pessoa';
-COMMENT ON COLUMN public.PSS.TX_NM_PSS IS 'Nome da Pessoa';
+COMMENT ON COLUMN public.PSS.NM_PSS IS 'Nome da Pessoa';
 COMMENT ON COLUMN public.PSS.TX_CPF_PSS IS 'Cpf da Pessoa';
 COMMENT ON COLUMN public.PSS.TX_TCEL_PSS IS 'telefone celular da pessoa';
 COMMENT ON COLUMN public.PSS.TX_EMAI_PSS IS 'Email da pessoa';
@@ -152,15 +154,15 @@ COMMENT ON TABLE public.UND IS 'Tabela com o cadastro das Unidades';
 COMMENT ON COLUMN public.UND.NR_UND IS 'PK Tabela Unidade';
 COMMENT ON COLUMN public.UND.NR_CID IS 'FK tabela Cidade';
 COMMENT ON COLUMN public.UND.TX_EMAI_UND IS 'Email da Unidade';
-COMMENT ON COLUMN public.UND.CD_UND IS 'CÛdigo da unidade';
+COMMENT ON COLUMN public.UND.CD_UND IS 'C√≥digo da unidade';
 COMMENT ON COLUMN public.UND.TX_TEL_UND IS 'Telefone da Unidade';
 COMMENT ON COLUMN public.UND.TX_NM_UND IS 'Nome da Unidade';
 COMMENT ON COLUMN public.UND.IN_UND_ATV IS '1 = Sim
-0 = N„o';
+0 = N√£o';
 COMMENT ON COLUMN public.UND.DT_HH_CAD_UND IS 'Data Hora Cadastro Unidade';
 COMMENT ON COLUMN public.UND.TX_JST_UND_IATV IS 'Texto com a justificativa da inatividade da unidade';
 COMMENT ON COLUMN public.UND.NR_TIP_UND IS 'PK tabela Tipo Unidade';
-COMMENT ON COLUMN public.UND.HR_UND IS 'Hor·rio Unidade';
+COMMENT ON COLUMN public.UND.HR_UND IS 'Hor√°rio Unidade';
 
 
 ALTER SEQUENCE public.seq_und OWNED BY public.UND.NR_UND;
@@ -177,14 +179,14 @@ CREATE TABLE public.USU_SIS (
                 NR_HR_USU_SIS NUMERIC(6) NOT NULL,
                 CONSTRAINT nr_usu_sis PRIMARY KEY (NR_USU_SIS)
 );
-COMMENT ON TABLE public.USU_SIS IS 'Tabela com o cadastro de usu·rios do sistema';
-COMMENT ON COLUMN public.USU_SIS.NR_USU_SIS IS 'Pk tabela Usu·rio Sistema';
-COMMENT ON COLUMN public.USU_SIS.TX_SNH_USU_SIS IS 'Senha do usu·rio sistema';
-COMMENT ON COLUMN public.USU_SIS.IN_USU_SIS_ATI IS 'Ativo(1 =Sim ou 0=N„o)';
+COMMENT ON TABLE public.USU_SIS IS 'Tabela com o cadastro de usu√°rios do sistema';
+COMMENT ON COLUMN public.USU_SIS.NR_USU_SIS IS 'Pk tabela Usu√°rio Sistema';
+COMMENT ON COLUMN public.USU_SIS.TX_SNH_USU_SIS IS 'Senha do usu√°rio sistema';
+COMMENT ON COLUMN public.USU_SIS.IN_USU_SIS_ATI IS 'Ativo(1 =Sim ou 0=N√£o)';
 COMMENT ON COLUMN public.USU_SIS.CD_CHV_SSBB IS 'Chave sissbb';
 COMMENT ON COLUMN public.USU_SIS.NR_PSS IS 'PK tabela pessoa';
-COMMENT ON COLUMN public.USU_SIS.DT_HH_CAD_USU_SIS IS 'Data Hora Cadastro Usu·rio Sistema';
-COMMENT ON COLUMN public.USU_SIS.NR_HR_USU_SIS IS 'PK tabela Hor·rio Usu·rio Sistema';
+COMMENT ON COLUMN public.USU_SIS.DT_HH_CAD_USU_SIS IS 'Data Hora Cadastro Usu√°rio Sistema';
+COMMENT ON COLUMN public.USU_SIS.NR_HR_USU_SIS IS 'PK tabela Hor√°rio Usu√°rio Sistema';
 
 
 ALTER SEQUENCE public.seq_usu_sis OWNED BY public.USU_SIS.NR_USU_SIS;
@@ -199,7 +201,7 @@ CREATE TABLE public.MENU (
 );
 COMMENT ON TABLE public.MENU IS 'Cadastro de menus do sistema';
 COMMENT ON COLUMN public.MENU.NR_MENU IS 'Pk tabela Menu';
-COMMENT ON COLUMN public.MENU.TX_DCR_MENU IS 'DescriÁ„o menu';
+COMMENT ON COLUMN public.MENU.TX_DCR_MENU IS 'Descri√ß√£o menu';
 COMMENT ON COLUMN public.MENU.IN_SIS_MENU IS 'W=Web
 M=Mobile';
 
@@ -210,12 +212,12 @@ CREATE SEQUENCE public.seq_prfl_;
 
 CREATE TABLE public.PRFL (
                 NR_PRFL NUMERIC(4) NOT NULL DEFAULT nextval('public.seq_prfl_'),
-                TX_NM_PRFL VARCHAR(30) NOT NULL,
+                NM_PRFL VARCHAR(30) NOT NULL,
                 CONSTRAINT nr_prfl PRIMARY KEY (NR_PRFL)
 );
-COMMENT ON TABLE public.PRFL IS 'Tabela com o cadastro de perfis de usu·rio do sistema';
+COMMENT ON TABLE public.PRFL IS 'Tabela com o cadastro de perfis de usu√°rio do sistema';
 COMMENT ON COLUMN public.PRFL.NR_PRFL IS 'PK tabela Perfil';
-COMMENT ON COLUMN public.PRFL.TX_NM_PRFL IS 'Nome Perfil';
+COMMENT ON COLUMN public.PRFL.NM_PRFL IS 'Nome Perfil';
 
 
 ALTER SEQUENCE public.seq_prfl_ OWNED BY public.PRFL.NR_PRFL;
@@ -228,7 +230,7 @@ CREATE TABLE public.PRFL_MENU (
                 NR_PRFL NUMERIC(4) NOT NULL,
                 CONSTRAINT nr_prfl_menu PRIMARY KEY (NR_PRFL_MENU)
 );
-COMMENT ON TABLE public.PRFL_MENU IS 'Tabela com o vÌnculo entre os perfis e os menus exibidos no sistema';
+COMMENT ON TABLE public.PRFL_MENU IS 'Tabela com o v√≠nculo entre os perfis e os menus exibidos no sistema';
 COMMENT ON COLUMN public.PRFL_MENU.NR_PRFL_MENU IS 'PK tabela Perfil Menu';
 COMMENT ON COLUMN public.PRFL_MENU.NR_MENU IS 'FK tabela Menu';
 COMMENT ON COLUMN public.PRFL_MENU.NR_PRFL IS 'FK tabela Perfil';
@@ -248,16 +250,16 @@ CREATE TABLE public.PRFL_UND_USU_SIS (
                 TX_JST_PRFL_UND_USU_IATV VARCHAR(30),
                 CONSTRAINT nr_prfl_und_usu_sis PRIMARY KEY (NR_PRFL_UND_USU_SIS)
 );
-COMMENT ON TABLE public.PRFL_UND_USU_SIS IS 'Tabela de vinculo entre usu·rio sistema, perfil e unidade';
-COMMENT ON COLUMN public.PRFL_UND_USU_SIS.NR_PRFL_UND_USU_SIS IS 'PK tabela Perfil Unidade Usu·rio Sistema';
+COMMENT ON TABLE public.PRFL_UND_USU_SIS IS 'Tabela de vinculo entre usu√°rio sistema, perfil e unidade';
+COMMENT ON COLUMN public.PRFL_UND_USU_SIS.NR_PRFL_UND_USU_SIS IS 'PK tabela Perfil Unidade Usu√°rio Sistema';
 COMMENT ON COLUMN public.PRFL_UND_USU_SIS.NR_PRFL IS 'FK tabela Perfil';
 COMMENT ON COLUMN public.PRFL_UND_USU_SIS.NR_UND IS 'FK Tabela Unidade';
 COMMENT ON COLUMN public.PRFL_UND_USU_SIS.NR_USU_SIS IS 'FK tabela Usuario Sistema';
-COMMENT ON COLUMN public.PRFL_UND_USU_SIS.DT_HH_CAD_PRFL_UND_SIS IS 'Data hora Cadastro Perfil Usu·rio Sistema';
-COMMENT ON COLUMN public.PRFL_UND_USU_SIS.IN_PRFL_UND_USU_SIS_ATI IS 'Indicador Perfil Unidade Usu·rio Sistema Ativo 
+COMMENT ON COLUMN public.PRFL_UND_USU_SIS.DT_HH_CAD_PRFL_UND_SIS IS 'Data hora Cadastro Perfil Usu√°rio Sistema';
+COMMENT ON COLUMN public.PRFL_UND_USU_SIS.IN_PRFL_UND_USU_SIS_ATI IS 'Indicador Perfil Unidade Usu√°rio Sistema Ativo 
 Ativo = 1
 Inativo = 0';
-COMMENT ON COLUMN public.PRFL_UND_USU_SIS.TX_JST_PRFL_UND_USU_IATV IS 'Texto Justificativa Perfil Unidade Usu·rio Inativo';
+COMMENT ON COLUMN public.PRFL_UND_USU_SIS.TX_JST_PRFL_UND_USU_IATV IS 'Texto Justificativa Perfil Unidade Usu√°rio Inativo';
 
 
 ALTER SEQUENCE public.seq_prfl_und_usu OWNED BY public.PRFL_UND_USU_SIS.NR_PRFL_UND_USU_SIS;

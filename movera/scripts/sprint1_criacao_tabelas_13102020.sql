@@ -41,10 +41,10 @@ COMMENT ON COLUMN public.HR_USU_SIS.HR_FIM_DMG IS 'Horário Fim Domingo';
 
 ALTER SEQUENCE public.seq_hr_usu_sis OWNED BY public.HR_USU_SIS.NR_HR_USU_SIS;
 
-CREATE SEQUENCE public.tip_und_nr_tip_und_seq;
+CREATE SEQUENCE public.seq_tip_und;
 
 CREATE TABLE public.TIP_UND (
-                NR_TIP_UND NUMERIC(3) NOT NULL DEFAULT nextval('public.tip_und_nr_tip_und_seq'),
+                NR_TIP_UND NUMERIC(3) NOT NULL DEFAULT nextval('public.seq_tip_und'),
                 NM_TIP_UND VARCHAR(30) NOT NULL,
                 CONSTRAINT nr_tip_und PRIMARY KEY (NR_TIP_UND)
 );
@@ -53,7 +53,7 @@ COMMENT ON COLUMN public.TIP_UND.NR_TIP_UND IS 'PK tabela Tipo Unidade';
 COMMENT ON COLUMN public.TIP_UND.NM_TIP_UND IS 'Nome do Tipo Unidade';
 
 
-ALTER SEQUENCE public.tip_und_nr_tip_und_seq OWNED BY public.TIP_UND.NR_TIP_UND;
+ALTER SEQUENCE public.seq_tip_und OWNED BY public.TIP_UND.NR_TIP_UND;
 
 CREATE SEQUENCE public.seq_prm_sis;
 

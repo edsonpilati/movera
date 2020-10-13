@@ -10,7 +10,7 @@
  <source-databases>
  </source-databases>
  <target-database id="ppdb" dbcs-ref="DS0">
-  <table id="TAB1" populated="true" UUID="58a81153-b58a-46c7-9cac-6f3bbcb06cd8" name="Perfil Unidade Usuário Sistema" objectType="TABLE" physicalName="PRFL_UND_USU_SIS" >
+  <table id="TAB1" populated="true" UUID="58a81153-b58a-46c7-9cac-6f3bbcb06cd8" name="PERFIL UNIDADE USUÁRIO SISTEMA" objectType="TABLE" physicalName="PRFL_UND_USU_SIS" >
    <remarks>Tabela de vinculo entre usuário sistema, perfil e unidade</remarks>
    <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL2" populated="true" UUID="5d2e4aaa-09eb-4403-be9d-08ab63ab8079" autoIncrement="true" autoIncrementSequenceName="SEQ_PRFL_UND_USU" defaultValue="" name="Número Perfil Unidade Usuário Sistema" nullable="0" physicalName="NR_PRFL_UND_USU_SIS" precision="6" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
@@ -183,8 +183,8 @@ M=Mobile</remarks>
     <column id="COL48" populated="true" UUID="d2029cc3-8d6c-4b6f-83d9-a79cb3207896" autoIncrement="false" autoIncrementSequenceName="SEQ_NR_TIP_UND" defaultValue="" name="Número Tipo Unidade" nullable="0" physicalName="NR_TIP_UND" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>PK tabela Tipo Unidade</remarks>
     </column>
-    <column id="COL49" populated="true" UUID="36c1b825-6ea6-4ba5-8b10-e35a3c4bb932" autoIncrement="false" autoIncrementSequenceName="UND_HR_UND_seq" defaultValue="" name="Horário Unidade" nullable="0" physicalName="HR_UND" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
-     <remarks>Horário Unidade</remarks>
+    <column id="COL49" populated="true" UUID="36c1b825-6ea6-4ba5-8b10-e35a3c4bb932" autoIncrement="false" autoIncrementSequenceName="UND_NR_HH_UND_seq" defaultValue="00" name="Número Hora Unidade" nullable="0" physicalName="NR_HH_UND" precision="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+     <remarks>Número de Horas a acrescentar ou diminuir da unidade em relação a Brasília</remarks>
     </column>
     </folder>
     <folder id="FOLTAB383" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -297,140 +297,137 @@ M=Mobile</remarks>
     <column id="COL79" populated="true" UUID="b5be4040-c78e-43b3-8d15-880866e0af20" autoIncrement="false" autoIncrementSequenceName="PRM_SIS_NR_MNTO_SSS_USU_seq" defaultValue="" name="Número Minutos Sessão Usuário" nullable="0" physicalName="NR_MNTO_SSS_USU" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>Número de minutos de sessão do usuário</remarks>
     </column>
-    <column id="COL80" populated="true" UUID="22dac4aa-ac6c-4e95-afa6-3a0d5a867877" autoIncrement="false" autoIncrementSequenceName="PRM_SIS_FSHR_BSB_seq" defaultValue="" name="Fuso Horário Brasília" nullable="0" physicalName="FSHR_BSB" precision="3" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
-     <remarks>Fuso Horário Brasília</remarks>
-    </column>
     </folder>
     <folder id="FOLTAB763" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
     <folder id="FOLTAB762" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB764" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX81" populated="true" UUID="8d33241f-4f1e-48b1-af10-931aa7c7f5d5" clustered="false" name="NR_PRM_SIS" physicalName="nr_prm_sis" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC82" populated="true" UUID="d9833e8f-f8b4-47f3-83b1-e097aa0a34ed" ascendingOrDescending="UNSPECIFIED" column-ref="COL77" name="Número Parâmetro Sistema" physicalName="NR_PRM_SIS" />
+    <index id="IDX80" populated="true" UUID="8d33241f-4f1e-48b1-af10-931aa7c7f5d5" clustered="false" name="NR_PRM_SIS" physicalName="nr_prm_sis" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC81" populated="true" UUID="d9833e8f-f8b4-47f3-83b1-e097aa0a34ed" ascendingOrDescending="UNSPECIFIED" column-ref="COL77" name="Número Parâmetro Sistema" physicalName="NR_PRM_SIS" />
     </index>
    </folder>
   </table>
-  <table id="TAB83" populated="true" UUID="5e11dbd2-679a-4dc8-8c2b-533a0d98e011" name="TIPO UNIDADE" objectType="TABLE" physicalName="TIP_UND" >
+  <table id="TAB82" populated="true" UUID="5e11dbd2-679a-4dc8-8c2b-533a0d98e011" name="TIPO UNIDADE" objectType="TABLE" physicalName="TIP_UND" >
    <remarks>Tipos de Unidade do Sistema</remarks>
-   <folder id="FOLTAB831" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL84" populated="true" UUID="904c9952-0c11-4b8e-8e85-666dac6b8054" autoIncrement="true" autoIncrementSequenceName="TIP_UND_NR_TIP_UND_seq" defaultValue="" name="Número Tipo Unidade" nullable="0" physicalName="NR_TIP_UND" precision="3" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+   <folder id="FOLTAB821" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL83" populated="true" UUID="904c9952-0c11-4b8e-8e85-666dac6b8054" autoIncrement="true" autoIncrementSequenceName="TIP_UND_NR_TIP_UND_seq" defaultValue="" name="Número Tipo Unidade" nullable="0" physicalName="NR_TIP_UND" precision="3" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>PK tabela Tipo Unidade</remarks>
     </column>
-    <column id="COL85" populated="true" UUID="22259f9c-9b40-4f9f-af39-ac1f2d4cef06" autoIncrement="false" autoIncrementSequenceName="TIP_UND_NM_TIP_UND_seq" defaultValue="" name="Nome Tipo Unidade" nullable="0" physicalName="NM_TIP_UND" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL84" populated="true" UUID="22259f9c-9b40-4f9f-af39-ac1f2d4cef06" autoIncrement="false" autoIncrementSequenceName="TIP_UND_NM_TIP_UND_seq" defaultValue="" name="Nome Tipo Unidade" nullable="0" physicalName="NM_TIP_UND" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Nome do Tipo Unidade</remarks>
     </column>
     </folder>
-    <folder id="FOLTAB833" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB823" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB832" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB822" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB834" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX86" populated="true" UUID="2e3c5d71-46ef-4254-b9f5-01e835cfe1c6" clustered="false" name="NR_TIP_UND" physicalName="nr_tip_und" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC87" populated="true" UUID="81f7d375-b12c-47a3-8f1a-fe375a0a50d8" ascendingOrDescending="UNSPECIFIED" column-ref="COL84" name="Número Tipo Unidade" physicalName="NR_TIP_UND" />
+    <folder id="FOLTAB824" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX85" populated="true" UUID="2e3c5d71-46ef-4254-b9f5-01e835cfe1c6" clustered="false" name="NR_TIP_UND" physicalName="nr_tip_und" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC86" populated="true" UUID="81f7d375-b12c-47a3-8f1a-fe375a0a50d8" ascendingOrDescending="UNSPECIFIED" column-ref="COL83" name="Número Tipo Unidade" physicalName="NR_TIP_UND" />
     </index>
    </folder>
   </table>
-  <table id="TAB88" populated="true" UUID="d39b1da4-a73f-4c00-96ca-4212f068ba9d" name="HORÁRIO USUÁRIO SISTEMA" objectType="TABLE" physicalName="HR_USU_SIS" >
+  <table id="TAB87" populated="true" UUID="d39b1da4-a73f-4c00-96ca-4212f068ba9d" name="HORÁRIO USUÁRIO SISTEMA" objectType="TABLE" physicalName="HR_USU_SIS" >
    <remarks>Tabela com o cadastro dos horários e dias para fazer login dos usuários do sistema</remarks>
-   <folder id="FOLTAB881" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL89" populated="true" UUID="5d9638ad-fa8c-4928-b82e-8ac48b3c717b" autoIncrement="true" autoIncrementSequenceName="SEQ_HR_USU_SIS" defaultValue="" name="Número Horário Usuário Sistema" nullable="0" physicalName="NR_HR_USU_SIS" precision="6" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+   <folder id="FOLTAB871" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL88" populated="true" UUID="5d9638ad-fa8c-4928-b82e-8ac48b3c717b" autoIncrement="true" autoIncrementSequenceName="SEQ_HR_USU_SIS" defaultValue="" name="Número Horário Usuário Sistema" nullable="0" physicalName="NR_HR_USU_SIS" precision="6" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>PK tabela Horário Usuário Sistema</remarks>
     </column>
-    <column id="COL90" populated="true" UUID="13436e39-e3c9-4126-8dbb-5c2313d893af" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_NM_HR_USU_SIS_seq" defaultValue="" name="Nome Horário Usuário Sistema" nullable="0" physicalName="NM_HR_USU_SIS" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL89" populated="true" UUID="13436e39-e3c9-4126-8dbb-5c2313d893af" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_NM_HR_USU_SIS_seq" defaultValue="" name="Nome Horário Usuário Sistema" nullable="0" physicalName="NM_HR_USU_SIS" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Nome Horário Usuário Sistema</remarks>
     </column>
-    <column id="COL91" populated="true" UUID="c252bf78-a87d-4863-b6e7-0c6a0a33cc04" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_SGDO_seq" defaultValue="" name="Horário Início Segunda" nullable="1" physicalName="HR_INC_SGDO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL90" populated="true" UUID="c252bf78-a87d-4863-b6e7-0c6a0a33cc04" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_SGDO_seq" defaultValue="" name="Horário Início Segunda" nullable="1" physicalName="HR_INC_SGDO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Início Usuário Sistema Segunda</remarks>
     </column>
-    <column id="COL92" populated="true" UUID="2d1a9787-8233-45c7-8781-8f084705b34b" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_SGDO_seq" defaultValue="" name="Horário Fim Segunda" nullable="1" physicalName="HR_FIM_SGDO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL91" populated="true" UUID="2d1a9787-8233-45c7-8781-8f084705b34b" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_SGDO_seq" defaultValue="" name="Horário Fim Segunda" nullable="1" physicalName="HR_FIM_SGDO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Fim Usuário Sistema Segunda</remarks>
     </column>
-    <column id="COL93" populated="true" UUID="6b7282e4-3bc9-4224-bcd5-8ac5062fd518" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_TER_seq" defaultValue="" name="Horário Início Terça" nullable="1" physicalName="HR_INC_TER" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL92" populated="true" UUID="6b7282e4-3bc9-4224-bcd5-8ac5062fd518" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_TER_seq" defaultValue="" name="Horário Início Terça" nullable="1" physicalName="HR_INC_TER" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Início Terça</remarks>
     </column>
-    <column id="COL94" populated="true" UUID="c5c89e8c-a0bc-4c01-a5e3-98c7919047f9" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_TER_seq" defaultValue="" name="Horário Fim Terça" nullable="1" physicalName="HR_FIM_TER" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL93" populated="true" UUID="c5c89e8c-a0bc-4c01-a5e3-98c7919047f9" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_TER_seq" defaultValue="" name="Horário Fim Terça" nullable="1" physicalName="HR_FIM_TER" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Fim Terça</remarks>
     </column>
-    <column id="COL95" populated="true" UUID="3aa40dd7-040e-41d2-9759-4abb9da4e971" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_QRTO_seq" defaultValue="" name="Horário Início Quarta" nullable="1" physicalName="HR_INC_QRTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL94" populated="true" UUID="3aa40dd7-040e-41d2-9759-4abb9da4e971" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_QRTO_seq" defaultValue="" name="Horário Início Quarta" nullable="1" physicalName="HR_INC_QRTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Início Quarta</remarks>
     </column>
-    <column id="COL96" populated="true" UUID="0cb85e8a-345b-4137-905f-47eb6aa8ed6c" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_QRTO_seq" defaultValue="" name="Horário Fim Quarta" nullable="1" physicalName="HR_FIM_QRTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL95" populated="true" UUID="0cb85e8a-345b-4137-905f-47eb6aa8ed6c" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_QRTO_seq" defaultValue="" name="Horário Fim Quarta" nullable="1" physicalName="HR_FIM_QRTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Fim Quarta</remarks>
     </column>
-    <column id="COL97" populated="true" UUID="f8814cc5-07d0-4b80-a025-b27f3d170c04" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_QNTO_seq" defaultValue="" name="Horário Início Quinta" nullable="1" physicalName="HR_INC_QNTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL96" populated="true" UUID="f8814cc5-07d0-4b80-a025-b27f3d170c04" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_QNTO_seq" defaultValue="" name="Horário Início Quinta" nullable="1" physicalName="HR_INC_QNTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Início Quinta</remarks>
     </column>
-    <column id="COL98" populated="true" UUID="46e54d4a-1e70-4c3b-ba3f-119f1156f854" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_QNTO_seq" defaultValue="" name="Horário Fim Quinta" nullable="1" physicalName="HR_FIM_QNTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL97" populated="true" UUID="46e54d4a-1e70-4c3b-ba3f-119f1156f854" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_QNTO_seq" defaultValue="" name="Horário Fim Quinta" nullable="1" physicalName="HR_FIM_QNTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Fim Quinta</remarks>
     </column>
-    <column id="COL99" populated="true" UUID="30738cba-35b6-4bcd-83fc-e576d76f26d9" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_SXTO_seq" defaultValue="" name="Horário Início Sexta" nullable="1" physicalName="HR_INC_SXTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL98" populated="true" UUID="30738cba-35b6-4bcd-83fc-e576d76f26d9" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_SXTO_seq" defaultValue="" name="Horário Início Sexta" nullable="1" physicalName="HR_INC_SXTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Início Sexta</remarks>
     </column>
-    <column id="COL100" populated="true" UUID="9985c6e6-a72a-4a60-9572-451893df57bc" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_SXTO_seq" defaultValue="" name="Horário Fim Sexta" nullable="1" physicalName="HR_FIM_SXTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL99" populated="true" UUID="9985c6e6-a72a-4a60-9572-451893df57bc" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_SXTO_seq" defaultValue="" name="Horário Fim Sexta" nullable="1" physicalName="HR_FIM_SXTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Fim Sexta</remarks>
     </column>
-    <column id="COL101" populated="true" UUID="3881be11-da3f-485f-b0d5-f820d3aa43f4" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_SBD_seq" defaultValue="" name="Horário Início Sábado" nullable="1" physicalName="HR_INC_SBD" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL100" populated="true" UUID="3881be11-da3f-485f-b0d5-f820d3aa43f4" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_SBD_seq" defaultValue="" name="Horário Início Sábado" nullable="1" physicalName="HR_INC_SBD" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Início Sábado</remarks>
     </column>
-    <column id="COL102" populated="true" UUID="09b67d34-802d-4dbe-b894-f308509d6137" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_SBD_seq" defaultValue="" name="Horário Fim Sábado" nullable="1" physicalName="HR_FIM_SBD" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL101" populated="true" UUID="09b67d34-802d-4dbe-b894-f308509d6137" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_SBD_seq" defaultValue="" name="Horário Fim Sábado" nullable="1" physicalName="HR_FIM_SBD" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Fim Sábado</remarks>
     </column>
-    <column id="COL103" populated="true" UUID="3a3bd956-8b0e-43bb-b28a-43c989480a14" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_DMG_seq" defaultValue="" name="Horário Início Domingo" nullable="1" physicalName="HR_INC_DMG" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL102" populated="true" UUID="3a3bd956-8b0e-43bb-b28a-43c989480a14" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_INC_DMG_seq" defaultValue="" name="Horário Início Domingo" nullable="1" physicalName="HR_INC_DMG" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Início Domingo</remarks>
     </column>
-    <column id="COL104" populated="true" UUID="41a70eeb-726f-400b-a99c-fe73ccc33c80" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_DMG_seq" defaultValue="" name="Horário Fim Domingo" nullable="1" physicalName="HR_FIM_DMG" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL103" populated="true" UUID="41a70eeb-726f-400b-a99c-fe73ccc33c80" autoIncrement="false" autoIncrementSequenceName="HR_USU_SIS_HR_FIM_DMG_seq" defaultValue="" name="Horário Fim Domingo" nullable="1" physicalName="HR_FIM_DMG" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks>Horário Fim Domingo</remarks>
     </column>
     </folder>
-    <folder id="FOLTAB883" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB873" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB882" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB872" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB884" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX105" populated="true" UUID="206f62b9-4239-424d-a86f-8c336c619455" clustered="false" name="NR_HR_USU_SIS" physicalName="nr_hr_usu_sis" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC106" populated="true" UUID="409cd0e9-cd0e-4da9-9bed-c8ee603edacc" ascendingOrDescending="ASCENDING" column-ref="COL89" name="Número Horário Usuário Sistema" physicalName="NR_HR_USU_SIS" />
+    <folder id="FOLTAB874" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX104" populated="true" UUID="206f62b9-4239-424d-a86f-8c336c619455" clustered="false" name="NR_HR_USU_SIS" physicalName="nr_hr_usu_sis" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC105" populated="true" UUID="409cd0e9-cd0e-4da9-9bed-c8ee603edacc" ascendingOrDescending="ASCENDING" column-ref="COL88" name="Número Horário Usuário Sistema" physicalName="NR_HR_USU_SIS" />
     </index>
    </folder>
   </table>
   <relationships>
-   <relationship id="REL107" populated="true" UUID="66c6ba0a-e4f9-4a4d-9a64-43c51242c6d6" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="6" identifying="false" name="PRFL_PRFL_UND_USU_FK" physicalName="prfl_prfl_und_usu_fk" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP108" populated="true" UUID="7302ec31-c119-42b7-bb72-6eb9640e41d2" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
+   <relationship id="REL106" populated="true" UUID="66c6ba0a-e4f9-4a4d-9a64-43c51242c6d6" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="6" identifying="false" name="PRFL_PRFL_UND_USU_FK" physicalName="PRFL_PRFL_UND_USU_FK" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP107" populated="true" UUID="7302ec31-c119-42b7-bb72-6eb9640e41d2" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
    </relationship>
-   <relationship id="REL109" populated="true" UUID="02cdd02d-d077-47e8-ba8c-3462f5853fa3" deferrability="7" deleteRule="3" fk-table-ref="TAB22" fkCardinality="7" identifying="false" name="PRFL_PRFL_MENU_FK" physicalName="prfl_prfl_menu_fk" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP110" populated="true" UUID="b46f8ecb-3346-41ae-9ade-b5c9526f9b11" fk-column-ref="COL25" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
+   <relationship id="REL108" populated="true" UUID="02cdd02d-d077-47e8-ba8c-3462f5853fa3" deferrability="7" deleteRule="3" fk-table-ref="TAB22" fkCardinality="7" identifying="false" name="PRFL_PRFL_MENU_FK" physicalName="PRFL_PRFL_MENU_FK" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP109" populated="true" UUID="b46f8ecb-3346-41ae-9ade-b5c9526f9b11" fk-column-ref="COL25" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
    </relationship>
-   <relationship id="REL111" populated="true" UUID="2e3058f1-6c2f-44b5-b30b-a81e41c85bdf" deferrability="7" deleteRule="3" fk-table-ref="TAB22" fkCardinality="7" identifying="false" name="MENU_PRFL_MENU_FK" physicalName="menu_prfl_menu_fk" pk-table-ref="TAB16" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP112" populated="true" UUID="5247933d-b304-42a2-ba7f-1b57709fd13f" fk-column-ref="COL24" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL17" />
+   <relationship id="REL110" populated="true" UUID="2e3058f1-6c2f-44b5-b30b-a81e41c85bdf" deferrability="7" deleteRule="3" fk-table-ref="TAB22" fkCardinality="7" identifying="false" name="MENU_PRFL_MENU_FK" physicalName="MENU_PRFL_MENU_FK" pk-table-ref="TAB16" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP111" populated="true" UUID="5247933d-b304-42a2-ba7f-1b57709fd13f" fk-column-ref="COL24" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL17" />
    </relationship>
-   <relationship id="REL113" populated="true" UUID="85ed15c0-3e47-473e-910c-bde6eb45734a" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="USU_SIS_PRFL_UND_USU_FK" physicalName="usu_sis_prfl_und_usu_fk" pk-table-ref="TAB28" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP114" populated="true" UUID="d5eb33fa-decb-41b4-960b-79fa2f2f5ea8" fk-column-ref="COL5" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL29" />
+   <relationship id="REL112" populated="true" UUID="85ed15c0-3e47-473e-910c-bde6eb45734a" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="USU_SIS_PRFL_UND_USU_FK" physicalName="USU_SIS_PRFL_UND_USU_FK" pk-table-ref="TAB28" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP113" populated="true" UUID="d5eb33fa-decb-41b4-960b-79fa2f2f5ea8" fk-column-ref="COL5" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL29" />
    </relationship>
-   <relationship id="REL115" populated="true" UUID="f13a28a2-77ce-432b-b871-548f82f59f42" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="UND_PRFL_UND_USU_SIS_fk" physicalName="und_prfl_und_usu_sis_fk" pk-table-ref="TAB38" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP116" populated="true" UUID="00365df1-073f-4d8e-8028-3d9e7fc6a98c" fk-column-ref="COL4" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL39" />
+   <relationship id="REL114" populated="true" UUID="f13a28a2-77ce-432b-b871-548f82f59f42" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="UND_PRFL_UND_USU_SIS_fk" physicalName="UND_PRFL_UND_USU_SIS_fk" pk-table-ref="TAB38" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP115" populated="true" UUID="00365df1-073f-4d8e-8028-3d9e7fc6a98c" fk-column-ref="COL4" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL39" />
    </relationship>
-   <relationship id="REL117" populated="true" UUID="5b4ad576-8531-4cbc-bd9a-03638ab15508" deferrability="7" deleteRule="3" fk-table-ref="TAB28" fkCardinality="7" identifying="false" name="PSS_USU_SIS_FK" physicalName="pss_usu_sis_fk" pk-table-ref="TAB52" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP118" populated="true" UUID="78ce3ec1-7e7b-493b-8757-3874c295b375" fk-column-ref="COL33" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL53" />
+   <relationship id="REL116" populated="true" UUID="5b4ad576-8531-4cbc-bd9a-03638ab15508" deferrability="7" deleteRule="3" fk-table-ref="TAB28" fkCardinality="7" identifying="false" name="PSS_USU_SIS_FK" physicalName="PSS_USU_SIS_FK" pk-table-ref="TAB52" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP117" populated="true" UUID="78ce3ec1-7e7b-493b-8757-3874c295b375" fk-column-ref="COL33" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL53" />
    </relationship>
-   <relationship id="REL119" populated="true" UUID="31fb340b-0c86-4e96-8e28-1b202f89f2cc" deferrability="7" deleteRule="3" fk-table-ref="TAB68" fkCardinality="6" identifying="false" name="UND_FDRL_CID_FK" physicalName="und_fdrl_cid_fk" pk-table-ref="TAB61" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP120" populated="true" UUID="ff73ffeb-77a0-4f2a-a475-f40b4bdb7fdb" fk-column-ref="COL73" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL62" />
+   <relationship id="REL118" populated="true" UUID="31fb340b-0c86-4e96-8e28-1b202f89f2cc" deferrability="7" deleteRule="3" fk-table-ref="TAB68" fkCardinality="6" identifying="false" name="UND_FDRL_CID_FK" physicalName="UND_FDRL_CID_FK" pk-table-ref="TAB61" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP119" populated="true" UUID="ff73ffeb-77a0-4f2a-a475-f40b4bdb7fdb" fk-column-ref="COL73" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL62" />
    </relationship>
-   <relationship id="REL121" populated="true" UUID="c20f2d42-c95a-42a9-8726-b41b0c1902b8" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="7" identifying="false" name="CID_UND_FK" physicalName="cid_und_fk" pk-table-ref="TAB68" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP122" populated="true" UUID="206331e1-86b5-4fb5-a7ff-ac11d281d796" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL69" />
+   <relationship id="REL120" populated="true" UUID="c20f2d42-c95a-42a9-8726-b41b0c1902b8" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="7" identifying="false" name="CID_UND_FK" physicalName="CID_UND_FK" pk-table-ref="TAB68" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP121" populated="true" UUID="206331e1-86b5-4fb5-a7ff-ac11d281d796" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL69" />
    </relationship>
-   <relationship id="REL123" populated="true" UUID="232f0826-3ecd-4b8b-896c-3027061b5924" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="6" identifying="false" name="TIP_UND_UND_FK" physicalName="tip_und_und_fk" pk-table-ref="TAB83" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP124" populated="true" UUID="f909f14f-9134-4ddf-bc05-f0b537a781c9" fk-column-ref="COL48" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL84" />
+   <relationship id="REL122" populated="true" UUID="232f0826-3ecd-4b8b-896c-3027061b5924" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="6" identifying="false" name="TIP_UND_UND_FK" physicalName="TIP_UND_UND_FK" pk-table-ref="TAB82" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP123" populated="true" UUID="f909f14f-9134-4ddf-bc05-f0b537a781c9" fk-column-ref="COL48" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL83" />
    </relationship>
-   <relationship id="REL125" populated="true" UUID="01632d46-c84e-43a6-9c01-0a1c8a83f1f0" deferrability="7" deleteRule="3" fk-table-ref="TAB28" fkCardinality="7" identifying="false" name="HR_USU_SIS_USU_SIS_fk" physicalName="hr_usu_sis_usu_sis_fk" pk-table-ref="TAB88" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP126" populated="true" UUID="4eb4a307-984e-4f6f-93b9-9deab14f8123" fk-column-ref="COL35" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL89" />
+   <relationship id="REL124" populated="true" UUID="01632d46-c84e-43a6-9c01-0a1c8a83f1f0" deferrability="7" deleteRule="3" fk-table-ref="TAB28" fkCardinality="7" identifying="false" name="HR_USU_SIS_USU_SIS_fk" physicalName="HR_USU_SIS_USU_SIS_fk" pk-table-ref="TAB87" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP125" populated="true" UUID="4eb4a307-984e-4f6f-93b9-9deab14f8123" fk-column-ref="COL35" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL88" />
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.1892071150027206" viewportX="0" viewportY="3" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
-  <table-pane table-ref="TAB1" x="558" y="419" bgColor="0xe8cfdb" fgColor="0x000000" rounded="false" dashed="false"/>
+ <play-pen zoom="1.1892071150027206" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="559" y="418" bgColor="0xe8cfdb" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB11" x="219" y="184" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB16" x="201" y="623" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB22" x="187" y="416" bgColor="0xc7d0df" fgColor="0x000000" rounded="false" dashed="false"/>
@@ -440,18 +437,18 @@ M=Mobile</remarks>
   <table-pane table-ref="TAB61" x="736" y="20" bgColor="0xeec994" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB68" x="1278" y="27" bgColor="0xeec994" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB76" x="110" y="34" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB83" x="1225" y="232" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB88" x="1120" y="349" bgColor="0xc7d0df" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-link relationship-ref="REL113" pkConnection="0.046052631578947366" fkConnection="0.40114613180515757" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL107" pkConnection="0.42105263157894735" fkConnection="0.3700787401574803" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL111" pkConnection="0.4793388429752066" fkConnection="0.5097276264591439" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL117" pkConnection="0.21238938053097345" fkConnection="0.7964601769911505" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL109" pkConnection="0.4666666666666667" fkConnection="0.5330739299610895" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL119" pkConnection="0.352112676056338" fkConnection="0.8591549295774648" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL121" pkConnection="0.352112676056338" fkConnection="0.28402366863905326" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL115" pkConnection="0.41471571906354515" fkConnection="0.5444126074498568" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL123" pkConnection="0.45614035087719296" fkConnection="0.9704142011834319" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL125" pkConnection="0.08300395256916997" fkConnection="0.937007874015748" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-pane table-ref="TAB82" x="1225" y="232" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB87" x="1120" y="349" bgColor="0xc7d0df" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL112" pkConnection="0.046052631578947366" fkConnection="0.40114613180515757" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL106" pkConnection="0.42105263157894735" fkConnection="0.3700787401574803" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL110" pkConnection="0.4793388429752066" fkConnection="0.5097276264591439" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL116" pkConnection="0.21238938053097345" fkConnection="0.7964601769911505" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL108" pkConnection="0.4666666666666667" fkConnection="0.5330739299610895" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL118" pkConnection="0.352112676056338" fkConnection="0.8591549295774648" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL120" pkConnection="0.352112676056338" fkConnection="0.28402366863905326" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL114" pkConnection="0.41471571906354515" fkConnection="0.5444126074498568" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL122" pkConnection="0.45614035087719296" fkConnection="0.9704142011834319" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL124" pkConnection="0.08300395256916997" fkConnection="0.937007874015748" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">

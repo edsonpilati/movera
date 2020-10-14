@@ -12,6 +12,9 @@ ADD CONSTRAINT uk_usu_sis_cd_chv_ssbb UNIQUE (cd_chv_ssbb);
 ALTER TABLE public.und
 ADD CONSTRAINT uk_und_cd_und UNIQUE (cd_und);
 
+ALTER TABLE public.pss
+ADD CONSTRAINT uk_pss_tx_cpf_pss UNIQUE (tx_cpf_pss);
+
 /*Constraints CHECK*/
 ALTER TABLE public.usu_sis ADD check (in_usu_sis_ati = '1' or in_usu_sis_ati = '0');
 ALTER TABLE public.und ADD check (in_und_atv = '1' or in_und_atv = '0'); 

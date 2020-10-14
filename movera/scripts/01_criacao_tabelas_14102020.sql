@@ -1,3 +1,6 @@
+/*DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;*/
+
 
 CREATE SEQUENCE public.seq_tip_und;
 

@@ -6179,7 +6179,7 @@ INSERT INTO public.mun (cd_mun,cd_mun_cmt,nm_mun,nr_und_fdrl) VALUES
 	 ('00108','5300108','Brasília',27);
 	
 	 
-	
+/*Carga fake de unidades*/	
 insert into und (nr_mun, nr_tip_und, tx_emai_und, cd_und, tx_tel_und, tx_nm_und, in_und_atv, tx_jst_und_iatv)
 values (5570,1,'bsb@movera.com.br','5001','61998741245','Unidade Brasília','1',null);
 
@@ -6198,5 +6198,11 @@ values (3480,2,'guarulhos@movera.com.br','0002','61998741241','Unidade Guarulhos
 insert into und (nr_mun, nr_tip_und, tx_emai_und, cd_und, tx_tel_und, tx_nm_und, in_und_atv, tx_jst_und_iatv)
 values (3813,2,'saocaetanosul@movera.com.br','0003','61998741240','Unidade São Caetano do Sul','1',null);
 
-
+/*carga fake de pessoas*/
+insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Edson', '41600123023','61999999999', 'teste@email.com');
+insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('João', '60661750094','61999999999', 'teste@email.com');
+insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Maria', '72992115053','61999999999', 'teste@email.com');
+insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Antônio', '92538014093','61999999999', 'teste@email.com');
+insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Fernando', '90056851073','61999999999', 'teste@email.com');
+insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Luana', '80011624000','61999999999', 'teste@email.com');
 

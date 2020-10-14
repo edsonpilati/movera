@@ -6205,4 +6205,16 @@ insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Maria', 
 insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Antônio', '92538014093','61999999999', 'teste@email.com');
 insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Fernando', '90056851073','61999999999', 'teste@email.com');
 insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Luana', '80011624000','61999999999', 'teste@email.com');
+  
+/*carga fake de usuários do sistema*/
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('1234.','1',1);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12345','1',2);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12346','1',3);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12347','1',4);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12348','1',5);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12349','1',6);
+
+
+
+
 

@@ -6215,6 +6215,3 @@ insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12348','1'
 insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12349','1',6);
 
 
-
-
-

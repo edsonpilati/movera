@@ -6,9 +6,6 @@ ALTER TABLE public.usu_sis ALTER COLUMN dt_hh_cad_usu_sis SET DEFAULT now();
 ALTER TABLE public.pss ALTER COLUMN dt_hh_cad_pss SET DEFAULT now(); 
 
 /*Constraints UNIQUE*/
-ALTER TABLE public.usu_sis
-ADD CONSTRAINT uk_usu_sis_cd_chv_ssbb UNIQUE (cd_chv_ssbb);
-
 ALTER TABLE public.und
 ADD CONSTRAINT uk_und_cd_und UNIQUE (cd_und);
 

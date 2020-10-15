@@ -2,6 +2,7 @@
 CREATE SCHEMA public;*/
 
 
+
 CREATE SEQUENCE public.seq_tip_und;
 
 CREATE TABLE public.TIP_UND (
@@ -130,7 +131,6 @@ CREATE TABLE public.USU_SIS (
                 NR_USU_SIS NUMERIC(6) NOT NULL DEFAULT nextval('public.seq_usu_sis'),
                 TX_SNH_USU_SIS VARCHAR(11) NOT NULL,
                 IN_USU_SIS_ATI CHAR(1) DEFAULT 1 NOT NULL,
-                CD_CHV_SSBB VARCHAR(8),
                 NR_PSS NUMERIC(8) NOT NULL,
                 DT_HH_CAD_USU_SIS TIMESTAMP NOT NULL,
                 CONSTRAINT nr_usu_sis PRIMARY KEY (NR_USU_SIS)
@@ -139,7 +139,6 @@ COMMENT ON TABLE public.USU_SIS IS 'Tabela com o cadastro de usuários do sistem
 COMMENT ON COLUMN public.USU_SIS.NR_USU_SIS IS 'Pk tabela Usuário Sistema';
 COMMENT ON COLUMN public.USU_SIS.TX_SNH_USU_SIS IS 'Senha do usuário sistema';
 COMMENT ON COLUMN public.USU_SIS.IN_USU_SIS_ATI IS 'Ativo(1 =Sim ou 0=Não)';
-COMMENT ON COLUMN public.USU_SIS.CD_CHV_SSBB IS 'Chave sissbb';
 COMMENT ON COLUMN public.USU_SIS.NR_PSS IS 'PK tabela pessoa';
 COMMENT ON COLUMN public.USU_SIS.DT_HH_CAD_USU_SIS IS 'Data Hora Cadastro Usuário Sistema';
 

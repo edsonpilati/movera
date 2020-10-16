@@ -6214,5 +6214,13 @@ insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12346','1'
 insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12347','1',4);
 insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12348','1',5);
 insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12349','1',6);*/
+--select * from usu_sis;
+
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nm_usu_sis, tx_cpf_usu_sis, tx_tcel_usu_sis, tx_emai_usu_sis, nr_prfl) values ('1234.','1','Edson', '41600123023','61999999999', 'teste@email.com',1);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nm_usu_sis, tx_cpf_usu_sis, tx_tcel_usu_sis, tx_emai_usu_sis, nr_prfl) values ('1234.','1','João', '60661750094','61999999999', 'teste@email.com',2);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nm_usu_sis, tx_cpf_usu_sis, tx_tcel_usu_sis, tx_emai_usu_sis, nr_prfl) values ('1234.','1','Maria', '72992115053','61999999999', 'teste@email.com',3);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nm_usu_sis, tx_cpf_usu_sis, tx_tcel_usu_sis, tx_emai_usu_sis, nr_prfl) values ('1234.','1','Antônio', '92538014093','61999999999', 'teste@email.com',4);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nm_usu_sis, tx_cpf_usu_sis, tx_tcel_usu_sis, tx_emai_usu_sis, nr_prfl) values ('1234.','1','Fernando', '90056851073','61999999999', 'teste@email.com',1);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nm_usu_sis, tx_cpf_usu_sis, tx_tcel_usu_sis, tx_emai_usu_sis, nr_prfl) values ('1234.','1','Luana', '80011624000','61999999999', 'teste@email.com',2);
 
 

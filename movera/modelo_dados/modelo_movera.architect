@@ -1136,7 +1136,7 @@ F= Feminino</remarks>
  <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="movera"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.1892071150027206" viewportX="15" viewportY="1598" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="1.1892071150027206" viewportX="0" viewportY="1192" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="1132" y="1433" bgColor="0xdfedce" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB9" x="79" y="1815" bgColor="0xf6bcbc" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB15" x="742" y="1643" bgColor="0xb9bbf6" fgColor="0x000000" rounded="true" dashed="false"/>
@@ -1152,7 +1152,7 @@ F= Feminino</remarks>
   <table-pane table-ref="TAB84" x="865" y="917" bgColor="0xdfedce" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB95" x="2573" y="2083" bgColor="0xe4e4b8" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB102" x="2556" y="1901" bgColor="0xb9bbf6" fgColor="0x000000" rounded="true" dashed="false"/>
-  <table-pane table-ref="TAB108" x="242" y="1356" bgColor="0xc7d0df" fgColor="0x000000" rounded="true" dashed="false"/>
+  <table-pane table-ref="TAB108" x="243" y="1355" bgColor="0xc7d0df" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB120" x="444" y="1888" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB127" x="875" y="1944" bgColor="0xeeeeee" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB133" x="311" y="1210" bgColor="0xe8cfdb" fgColor="0x000000" rounded="true" dashed="false"/>

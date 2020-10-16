@@ -1,3 +1,4 @@
+insert into tip_und (nm_tip_und) values ('Matriz');
 insert into tip_und (nm_tip_und) values ('Parceira');
 insert into tip_und (nm_tip_und) values ('Própria');
 
@@ -9,11 +10,11 @@ insert into prfl (nm_prfl) values ('Supervisor');
 insert into prfl (nm_prfl) values ('Agente');
 insert into prfl (nm_prfl) values ('Analista Backoffice');
 
-insert into menu (in_sis_menu, tx_dcr_menu ) values ('W','Unidade');
-insert into menu (in_sis_menu, tx_dcr_menu ) values ('W','Usuários');
+/*insert into menu (in_sis_menu, tx_dcr_menu ) values ('W','Unidade');
+insert into menu (in_sis_menu, tx_dcr_menu ) values ('W','Usuários');*/
 
-insert into prfl_menu (nr_menu,nr_prfl) values (1,1);--Unidade, Master
-insert into prfl_menu (nr_menu,nr_prfl) values (2,1);--Usuários, Master
+/*insert into prfl_menu (nr_menu,nr_prfl) values (1,1);--Unidade, Master
+insert into prfl_menu (nr_menu,nr_prfl) values (2,1);--Usuários, Master*/
 
 INSERT INTO public.und_fdrl (cd_und_fdrl,nm_und_fdrl,sg_und_fdrl) VALUES
 	 ('11','Rondônia','RO'),
@@ -6199,19 +6200,19 @@ insert into und (nr_mun, nr_tip_und, tx_emai_und, cd_und, tx_tel_und, tx_nm_und,
 values (3813,2,'saocaetanosul@movera.com.br','0003','61998741240','Unidade São Caetano do Sul','1',null);
 
 /*carga fake de pessoas*/
-insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Edson', '41600123023','61999999999', 'teste@email.com');
+/*insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Edson', '41600123023','61999999999', 'teste@email.com');
 insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('João', '60661750094','61999999999', 'teste@email.com');
 insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Maria', '72992115053','61999999999', 'teste@email.com');
 insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Antônio', '92538014093','61999999999', 'teste@email.com');
 insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Fernando', '90056851073','61999999999', 'teste@email.com');
-insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Luana', '80011624000','61999999999', 'teste@email.com');
+insert into pss (nm_pss, tx_cpf_pss, tx_tcel_pss, tx_emai_pss) values ('Luana', '80011624000','61999999999', 'teste@email.com');*/
   
 /*carga fake de usuários do sistema*/
-insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('1234.','1',1);
+/*insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('1234.','1',1);
 insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12345','1',2);
 insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12346','1',3);
 insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12347','1',4);
 insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12348','1',5);
-insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12349','1',6);
+insert into usu_sis (tx_snh_usu_sis, in_usu_sis_ati, nr_pss) values ('12349','1',6);*/
 
 

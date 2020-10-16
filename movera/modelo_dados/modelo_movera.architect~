@@ -1136,7 +1136,7 @@ F= Feminino</remarks>
  <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="movera"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.1892071150027206" viewportX="15" viewportY="1638" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="1.1892071150027206" viewportX="15" viewportY="1598" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="1132" y="1433" bgColor="0xdfedce" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB9" x="79" y="1815" bgColor="0xf6bcbc" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB15" x="742" y="1643" bgColor="0xb9bbf6" fgColor="0x000000" rounded="true" dashed="false"/>
@@ -1182,7 +1182,7 @@ F= Feminino</remarks>
   <table-link relationship-ref="REL268" pkConnection="0.5625" fkConnection="0.5064102564102564" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
   <table-link relationship-ref="REL318" pkConnection="0.7004830917874396" fkConnection="0.2932692307692308" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
   <table-link relationship-ref="REL312" pkConnection="0.2676056338028169" fkConnection="0.6064516129032258" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL288" pkConnection="0.4888888888888889" fkConnection="0.25882352941176473" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="36"/>
+  <table-link relationship-ref="REL288" pkConnection="0.4888888888888889" fkConnection="0.9294117647058824" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="36"/>
   <table-link relationship-ref="REL310" pkConnection="0.323943661971831" fkConnection="0.5294117647058824" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL276" pkConnection="0.07122507122507123" fkConnection="0.14084507042253522" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL324" pkConnection="0.5308056872037915" fkConnection="0.47738693467336685" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="72"/>
@@ -1190,7 +1190,7 @@ F= Feminino</remarks>
   <table-link relationship-ref="REL320" pkConnection="0.4727272727272727" fkConnection="0.5161290322580645" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="72"/>
   <table-link relationship-ref="REL328" pkConnection="0.46543778801843316" fkConnection="0.5326633165829145" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
   <table-link relationship-ref="REL314" pkConnection="0.21942446043165467" fkConnection="0.49377593360995853" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL290" pkConnection="0.15294117647058825" fkConnection="0.8591549295774648" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL290" pkConnection="0.3058823529411765" fkConnection="0.8309859154929577" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL272" pkConnection="0.3333333333333333" fkConnection="0.2676056338028169" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL316" pkConnection="0.7746478873239436" fkConnection="0.29292929292929293" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL274" pkConnection="0.45089285714285715" fkConnection="0.5516014234875445" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
